@@ -1,0 +1,462 @@
+
+
+/* Iphone 12 pro responsive */
+
+/* en general */
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    background-color: black;
+}
+
+
+/* header */
+header {
+    text-decoration: none;
+    height: 40px;
+    margin-inline: 70px;
+    text-decoration: none;
+    color: black;
+    margin-left: 170px;
+    
+}
+
+.menuheader {
+    text-decoration: none;
+    color: rgb(243, 135, 243);
+    margin: 20px; 
+}
+
+.sacardilineado {
+    text-decoration: none;
+    
+}
+
+/*img*/
+
+div .contenedorfoto{
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content: flex-end;
+    
+}
+
+img {
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    width: 100px;
+    height: 90px;
+    margin-top: 10px;
+
+}
+
+/* main  de home */
+
+main{
+    background-color: black;
+}
+
+.tituloPpal{
+    font-size: 30px;
+    color: rgb(243, 135, 243) ;
+    margin-bottom: 0px;
+    
+}
+
+div h3 .canciones {
+    align-content: center;
+    background-color: rgb(38, 10, 70);
+    margin-right: 900px;
+    padding: 10px;
+    margin-left: 70px;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.section1{
+    margin-left: 100px;
+    margin-top: 300px;
+}
+
+.section2 {
+    margin-left: 100px;
+}
+
+.section3 {
+    margin-left: 100px;
+}
+
+article{
+    height: 270px;
+    width: 590px;
+    background-color: rgb(38, 10, 70);
+    margin-left: 70px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h3{
+    color:  rgb(243, 135, 243);
+    align-content: flex-start;
+    
+}
+
+h4{
+    color: rgb(184, 101, 184);
+    
+}
+
+p{
+    color: rgb(138, 74, 138);
+} 
+
+
+.maingenre {
+    margin-top: 500px;
+    margin-left: 60px;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+div a {
+    padding: 20px;
+    background-color: rgb(38, 10, 70);
+    color:  rgb(243, 135, 243);
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 30px;
+    margin-right: 100px;
+    
+}
+.article2{
+    text-decoration: none;
+}
+
+/*detail-genre*/
+article .nombreartist{
+    text-decoration: none;
+    align-content: center;
+    
+}
+
+/*detail-artists */
+
+.detail-artist {
+    height: 400px;
+    margin-top: 30px;
+    width: 200px;
+}
+
+/*detail-track*/
+.largo {
+
+color:rgb(243, 135, 243);
+height: 500px;
+
+}
+
+#alarga{
+    height: 600px;
+}
+
+
+.largo{
+    height: 500px;
+}
+
+/* footer */
+
+footer {
+    text-decoration: none;
+    height: 40px;
+    margin-inline: 80px;
+    text-decoration: none;
+    color: black;
+    width: 89%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+ .navheader {
+    text-decoration: none;
+    text-align: right;
+    background-color: rgb(38, 10, 70);
+    height: 00px;
+    width: 70%;
+    margin-left: 70px;
+
+}
+.nombres{
+    margin: 20px;
+    color:  rgb(243, 135, 243);
+    background-color:  rgb(38, 10, 70) ;
+    padding: 20px;
+}
+
+ .bajarfootgen {
+    margin-top: 450px;
+}
+
+ .bajarfootdetgen{
+    margin-top: 200px;
+}
+
+.bajarfootdetal{
+    margin-top: 170px;
+}
+
+.bajarfootdettr{
+    margin-top: 180px;
+}
+
+.bajarfootdetp{
+    margin-top: 270px;
+}
+.bajarfootsearch{
+    margin-top: 80px;
+}
+
+
+@media (min-width: 1024px) {
+
+/* en general */
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    background-color: black;
+}
+
+div.chico{
+    height: 170px;
+    width: 200px;
+}
+
+/* header */
+header {
+    text-decoration: none;
+    height: 40px;
+    margin-inline: 80px;
+    color: black;
+    margin-bottom: 0%;
+
+    width: 89%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    
+}
+
+div .divheader{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.menuheader {
+    text-decoration: none;
+    color: rgb(243, 135, 243);
+    margin: 20px; 
+}
+
+.sacardilineado {
+    text-decoration: none;
+    height: 0px;
+    
+}
+
+/*img*/
+
+div.contenedorfoto{
+   height : 100px;
+    
+}
+
+img {
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    width: 100px;
+    height: 90px;
+    margin-top: 10px;
+
+}
+
+a#mini{
+    height: 10px;
+    background-color: none;
+    margin-top: none;
+}
+
+/* main  de home */
+
+main{
+    background-color: black;
+}
+
+.comogenre {
+    margin-right: 1000px;
+    margin-top: 0%;
+}
+
+.tituloPpal{
+    font-size: 30px;
+    color: rgb(243, 135, 243) ;
+    margin-bottom: 70px;
+    
+}
+
+div h3 .canciones {
+    align-content: center;
+    background-color: rgb(38, 10, 70);
+    margin-right: 900px;
+    padding: 10px;
+    margin-left: 70px;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.section1{
+    margin: 80px;
+}
+
+.section2 {
+    margin: 80px;
+}
+
+.section3 {
+    margin: 80px;
+}
+
+article{
+    height: 280px;
+    width: 300px;
+    background-color: rgb(38, 10, 70);
+    margin-left: 70px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 3px solid  rgb(243, 135, 243) ;
+}
+
+h3{
+    color:  rgb(243, 135, 243);
+    align-content: flex-start;
+    
+}
+
+h4{
+    color: rgb(184, 101, 184);
+    
+}
+
+p{
+    color: rgb(138, 74, 138);
+} 
+
+.maingenre{
+    margin-top:0%;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+div a {
+    padding: 20px;
+    background-color: rgb(38, 10, 70);
+    color:  rgb(243, 135, 243);
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 30px;
+    
+    
+}
+
+/*detail-genre*/
+article .nombreartist{
+    text-decoration: none;
+    align-content: center;
+    
+}
+
+/* div.chico{
+    height: 0px;
+    margin-top: 20px;
+} */
+
+/*detail-artists */
+
+.detail-artist {
+    height: 400px;
+    width: 300px;
+}
+
+/*detail-track*/
+.largo {
+
+color:rgb(243, 135, 243);
+height: 400px;
+
+}
+
+
+/* footer */
+
+footer {
+    text-decoration: none;
+    height: 40px;
+    margin-inline: 80px;
+    color: black;
+    width: 89%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.navheader {
+    text-decoration: none;
+    text-align: right;
+    background-color: rgb(38, 10, 70);
+    height: 100px;
+    width: 70%;
+    margin-left: 170px;
+    border: 3px solid  rgb(243, 135, 243) ;
+
+}
+
+.nombres{
+    margin: 20px;
+    margin-right: 20px;
+    color:  rgb(243, 135, 243);
+    margin-top: 15px;
+}
+
+}

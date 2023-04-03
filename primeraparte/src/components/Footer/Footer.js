@@ -2,9 +2,16 @@ import React from "react";
 
 function Footer(){
     return(
+        <footer></footer>
+        /* 
         <footer>
-        <p> Serena Saguier - Joaquin Brandan - Miguel Guerrero </p>
-    </footer>
+            <nav className="navheader">
+                <div> 
+                <h3 className="nombres"> Serena Saguier - Joaquin Brandan - Miguel Guerrero </h3>
+                </div>
+            </nav>
+        </footer>
+        */
     )
 }
 

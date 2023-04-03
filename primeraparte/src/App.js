@@ -27,35 +27,3 @@ function App() {
   }
   
   export default App;
-
-/*import React from "react";
-import {Route} from 'react-router-dom'
-import {Switch} from 'react-router-dom'
-
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
-
-
-import Home from "./screens/Home/Home";
-import NotFound from "./screens/NotFound/NotFound";
-
-
-function App() {
-
-  return (
-    <>
-      <Navbar />
-      <Switch>
-        <Route path='/' exact={true} component={Home} />
-        <Route path='/AboutUs/:id?' component={AboutUs} />
-        <Route path='/NotFound' component={NotFound} />
-        <Route path='/Personajes'  component={Personajes} />
-        <Route path='/UnPersonaje/:id?' component={UnPersonaje} />
-
-      </Switch>
-      <Footer />
-    </>
-  );
-}
-
-export default App; */

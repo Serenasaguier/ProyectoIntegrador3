@@ -25,18 +25,17 @@ const opciones = [
 function Navbar(props){
 
     return (
-        <nav>
-            <ul className="main-nav">
+        <header>
+        <nav className='navheader'>
+            <div>
                 { 
-                    opciones.map((opcion,idx)=> <li>
+                    opciones.map((opcion,idx)=> <a className='menuheader'>
                         <Link to={opcion.path}>{opcion.nombre}</Link>
-                    </li>)
+                    </a>)
                 }
-            </ul>
-            <ul className="user">
-                <li>Nombre usuario <img src="./img/user.jpg" alt=""/></li>
-            </ul>
+            </div>
         </nav>
+        </header>
     )
 }
 
