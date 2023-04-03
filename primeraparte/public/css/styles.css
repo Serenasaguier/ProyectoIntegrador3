@@ -9,7 +9,6 @@ body {
     background-color: black;
 }
 
-
 /* header */
 header {
     text-decoration: none;
@@ -190,6 +189,9 @@ footer {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
 }
 
  .navheader {
@@ -439,6 +441,9 @@ footer {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
 }
 
 .navheader {
@@ -446,10 +451,31 @@ footer {
     text-align: right;
     background-color: rgb(38, 10, 70);
     height: 100px;
-    width: 70%;
+    width: 100%;
     margin-left: 170px;
     border: 3px solid  rgb(243, 135, 243) ;
+}
 
+.NavBar{
+    margin-left: 10px;
+}
+
+.infonav{
+   width: 100%;
+   height: 100%;
+   padding: -10%;
+   border-radius: 1%;
+   display: flex;
+   align-items: center;
+    
+}
+
+.menuheader{
+    
+    width: 10%;
+    height: 100%;
+   padding: 0%;
+   align-self: center;
 }
 
 .nombres{
@@ -457,6 +483,18 @@ footer {
     margin-right: 20px;
     color:  rgb(243, 135, 243);
     margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
+
+footer.foot{
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: -35px;
+    
+    
+}
+
 
 }

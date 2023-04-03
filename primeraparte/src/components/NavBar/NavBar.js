@@ -17,6 +17,18 @@ const opciones = [
         path: ' /Favoritos ',
     },
     {
+        nombre: ' Canciones ',
+        path: ' /Canciones ',
+    },
+    {
+        nombre: ' Albums ',
+        path: ' /Albums ',
+    },
+    {
+        nombre: ' Artistas ',
+        path: ' /Artistas ',
+    },
+    {
         nombre: ' Buscar ',
         path: ' /Buscar ',
     }
@@ -25,9 +37,10 @@ const opciones = [
 function Navbar(props){
 
     return (
-        <header>
+        <body>
+        <header className='NavBar'>
         <nav className='navheader'>
-            <div>
+            <div className='infonav'>
                 { 
                     opciones.map((opcion,idx)=> <a className='menuheader'>
                         <Link to={opcion.path}>{opcion.nombre}</Link>
@@ -36,6 +49,7 @@ function Navbar(props){
             </div>
         </nav>
         </header>
+        </body>
     )
 }
 
