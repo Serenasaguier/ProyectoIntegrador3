@@ -9,28 +9,28 @@ import {Link} from 'react-router-dom'
 
 const opciones = [
     {
-        nombre: ' Home ',
-        path: ' / ',
+        nombre: 'Home',
+        path: '/',
     },
     {
-        nombre: ' Favoritos ',
-        path: ' /Favoritos ',
+        nombre: 'Favoritos',
+        path: '/Favoritos',
     },
     {
-        nombre: ' Canciones ',
-        path: ' /Canciones ',
+        nombre: 'Canciones',
+        path: '/Canciones',
     },
     {
-        nombre: ' Albums ',
-        path: ' /Albums ',
+        nombre: 'Albums',
+        path: '/Albums',
     },
     {
-        nombre: ' Artistas ',
-        path: ' /Artistas ',
+        nombre: 'Artistas',
+        path: '/Artistas',
     },
     {
-        nombre: ' Buscar ',
-        path: ' /Buscar ',
+        nombre: 'Buscar',
+        path: '/Buscar',
     }
 ]
 
@@ -42,9 +42,9 @@ function Navbar(props){
         <nav className='navheader'>
             <div className='infonav'>
                 { 
-                    opciones.map((opcion,idx)=> <a className='menuheader'>
-                        <Link to={opcion.path}>{opcion.nombre}</Link>
-                    </a>)
+                    opciones.map((opcion,idx)=> 
+                        <Link className='menuheader' to={opcion.path}>{opcion.nombre}</Link>
+                )
                 }
             </div>
         </nav>
@@ -54,3 +54,5 @@ function Navbar(props){
 }
 
 export default Navbar
+
+

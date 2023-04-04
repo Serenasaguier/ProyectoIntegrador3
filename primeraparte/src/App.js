@@ -7,7 +7,7 @@ import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Buscar from "./components/Buscador.js/Buscador";
 import Home from "./components/Home/Home";
-import Favoritos from "./components/Favoritos/Favoritos";
+import Favoritos from "./screens/Favoritos/Favoritos";
 
 function App() {
   
