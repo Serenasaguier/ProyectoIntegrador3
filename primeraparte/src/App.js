@@ -11,15 +11,14 @@ import Favoritos from "./screens/Favoritos/Favoritos";
 
 function App() {
   
-
     return (
       <>
         <Navbar />
         <Switch>
           <Route path='/' exact={true} component={Home} />
           <Route path='/Favoritos' component={Favoritos} />
-          <Route path='/Buscar/:id?' component={Buscar} />
-  
+          <Route path='/Buscar' component={Buscar} />
+         <Route path='' component={ NotFound } />
         </Switch>
         <Footer />
       </>
