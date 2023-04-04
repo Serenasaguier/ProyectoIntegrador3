@@ -8,18 +8,18 @@ import Footer from "./components/Footer/Footer";
 import Buscar from "./components/Buscador.js/Buscador";
 import Home from "./components/Home/Home";
 import Favoritos from "./components/Favoritos/Favoritos";
+import NotFound from "./screens/NotFound/NotFound";
 
 function App() {
   
-
     return (
       <>
         <Navbar />
         <Switch>
           <Route path='/' exact={true} component={Home} />
           <Route path='/Favoritos' component={Favoritos} />
-          <Route path='/Buscar/:id?' component={Buscar} />
-  
+          <Route path='/Buscar' component={Buscar} />
+         <Route path='' component={ NotFound } />
         </Switch>
         <Footer />
       </>
