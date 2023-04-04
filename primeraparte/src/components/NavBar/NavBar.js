@@ -31,6 +31,10 @@ const opciones = [
     {
         nombre: ' Buscar ',
         path: ' /Buscar ',
+    },{
+        nombre: 'Azul',
+        path:'/'
+
     }
 ]
 
@@ -47,6 +51,7 @@ function Navbar(props){
                     </a>)
                 }
             </div>
+            
         </nav>
         </header>
         </body>
