@@ -5,8 +5,8 @@ class DetalleElemento extends Component {
   constructor(props){
     super(props)
     this.state={
-      id:this.props.match.params.id,
-      detalle: ' '
+      id: props.match.params.id,
+      detalle: ''
     }
   }
 
@@ -22,16 +22,15 @@ class DetalleElemento extends Component {
   render() {
     console.log(this.props.match.params.id)
     return (
-      <div>
-        {
-          this.state.detalle === ' ' ?
-          <h1>Cargando ... </h1>:
-          <div>
-            <img src={this.state.detalle.image} />
-            <h1>{this.state.detallle.name}</h1>
-          </div>
-        }
-      </div>
+      <>
+            <h1>Detalle</h1>
+            {
+                this.state.detalle === '' ?
+                <h1>Cargando detalle</h1>
+                :
+                <h2>{this.state.detalle.name}</h2>
+            }
+        </>
     )
   }
 }

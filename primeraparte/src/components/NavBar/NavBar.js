@@ -9,32 +9,24 @@ import {Link} from 'react-router-dom'
 
 const opciones = [
     {
-        nombre: ' Home ',
-        path: ' / ',
+        nombre: 'Home',
+        path: '/',
     },
     {
-        nombre: ' Favoritos ',
-        path: ' /Favoritos ',
+        nombre: 'Favoritos',
+        path: '/Favoritos',
     },
     {
-        nombre: ' Canciones ',
-        path: ' /Canciones ',
+        nombre: 'Albums',
+        path: '/Albums',
     },
     {
-        nombre: ' Albums ',
-        path: ' /Albums ',
+        nombre: 'Artistas',
+        path: '/Artistas',
     },
     {
-        nombre: ' Artistas ',
-        path: ' /Artistas ',
-    },
-    {
-        nombre: ' Buscar ',
-        path: ' /Buscar ',
-    },{
-        nombre: 'Azul',
-        path:'/'
-
+        nombre: 'Buscar',
+        path: '/Buscar',
     }
 ]
 

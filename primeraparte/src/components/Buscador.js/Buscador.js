@@ -59,16 +59,16 @@ import NotFound from '../../screens/NotFound/NotFound';
   render() {
     return (
         <>
-      <form onSubmit={(event)=> this.buscador(event)}>
-          <div>
-              <label>Busca lo que quieras</label>
-          </div>
-          <div>
-              <input onChange={(event)=> this.guardarValor(event)} value={this.state.valorInput} />
-          </div>
-          <button type='submit' onClick={(event)=> this.metodoQueEnvia(event)}>Enviar consulta</button>
-        </form>
+
+        <nav className=''>
+        <div className='navbuscador formulario'>
+        <form class="buscador navbuscador" onSubmit={(event)=> this.buscador(event)} >
+                <input type="text" placeholder="Búsqueda" className="search buscar" onChange={(event)=> this.guardarValor(event)} value={this.state.valorInput} />
+                <button type="submit" onClick={(event)=> this.metodoQueEnvia(event)}> Search</button>
+            </form> 
+        </div>
         <p>{this.state.mensaje}</p>
+        </nav>
         </>
     )
   }
