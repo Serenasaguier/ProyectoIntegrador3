@@ -1,10 +1,20 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-const ApiAlbums = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/album/'
+const ApiAlbums = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums'
 
-const API = 'https://rickandmortyapi.com/api/character'
+console.log(ApiAlbums)
 
+const mas = [
+  {
+    nombre:'Ver todas',
+    path:'/Albums'
+  },
+  {
+    nombre: 'Ir al detalle',
+    path:'/detalleAlbums'
+  }
+]
 
 class ContenedorAlbums extends Component {
     constructor(props){
@@ -57,17 +67,25 @@ class ContenedorAlbums extends Component {
         {
            this.state.musica.length === 0 ?
                     <p>Cargando...</p> :
+                    <section className='section1'>
+                      <article className='article1'>
                     <div className="character-card" >
-                        <ul>
+                        <h3 className='canciones'>
                             {
-                                this.state.musica.map(musica => <li>{musica.name}</li>)
+                                this.state.musica.map(musica => <li>{musica.title}</li>)
                             }
-                        </ul>
+                        </h3>
                         <h4>album copeee</h4>
+                        {
+                          mas.map((extra,idx)=><a>
+                            <Link to={extra.path}> {extra.nombre}</Link>
+                          </a>)
+                        }
                         <p className={this.state.clase}>funcionaaaaaaa</p>
                         <a onClick={()=> this.cambiarTexto()}> {this.state.texto} </a>
-                        
                     </div>
+                    </article>
+                    </section>
          }
       </div>
     )

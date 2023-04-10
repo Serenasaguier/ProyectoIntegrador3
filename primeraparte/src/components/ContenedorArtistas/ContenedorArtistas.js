@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 
-const ApiArtistas = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/artist/'
+const ApiArtistas = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart'
 let url = 'https://api.allorigins.win/raw?url=https://api.deezer.com/chart'
 
-const API = 'https://rickandmortyapi.com/api/character'
+console.log(ApiArtistas)
+
 
  class ContenedorArtistas extends Component {
 
     constructor(props){
         super(props)
         this.state={
-            musica: [],
+            artistas: [],
             load: true,
              mas:' ',
              Key: ' '
@@ -22,12 +22,12 @@ const API = 'https://rickandmortyapi.com/api/character'
         this.traerInfo(ApiArtistas,this.seting)
       }
     
-      traerInfo(url,callback){
-        fetch(url)
+      traerInfo(ApiArtistas,callback){
+        fetch(ApiArtistas)
         .then(res => res.json())
         .then(data => this.setState({
-          musica: this.state.musica.concat(data),
-          mas: data.info.next
+          artistas: this.state.artistas.concat(data),
+          mas: data.info // aca poner .next
         }))
         .catch(error => console.log(error))
       }
@@ -40,12 +40,12 @@ const API = 'https://rickandmortyapi.com/api/character'
         return(
           <div>
             {
-                        this.state.musica.length === 0 ?
+                        this.state.artistas.length === 0 ?
                         <p>Cargando...</p> :
                         <div>
                             <ul>
                                 {
-                                    this.state.musica.map(musica => <li>{musica.name}</li>)
+                                    this.state.artistas.map(artistas => <li>{artistas.name}</li>)
                                 }
                             </ul>
                             <button onClick={()=> this.dameMas()}>Traer mas Artistas</button>

@@ -59,7 +59,6 @@ import NotFound from '../../screens/NotFound/NotFound';
   render() {
     return (
         <>
-
         <nav className=''>
         <div className='navbuscador formulario'>
         <form class="buscador navbuscador" onSubmit={(event)=> this.buscador(event)} >
