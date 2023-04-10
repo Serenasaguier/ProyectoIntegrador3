@@ -47,6 +47,7 @@ function Navbar(props){
                 )
                 }
             </div>
+            
         </nav>
         </header>
         </body>
