@@ -37,9 +37,9 @@ function Navbar(props){
         <nav className='navheader'>
             <div className='infonav'>
                 { 
-                    opciones.map((opcion,idx)=> <a className='menuheader'>
-                        <Link to={opcion.path}>{opcion.nombre}</Link>
-                    </a>)
+                    opciones.map((opcion,idx)=>  <a className='menuheader'>
+                        <Link to={opcion.path}>{opcion.nombre}</Link></a>
+                )
                 }
             </div>
             
@@ -50,3 +50,5 @@ function Navbar(props){
 }
 
 export default Navbar
+
+
