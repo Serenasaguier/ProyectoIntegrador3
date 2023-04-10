@@ -12,7 +12,7 @@ class DetalleElemento extends Component {
 
   componentDidMount(){
     //ACA FALTA LA API
-    fetch(`api/ ${this.state.id}`)
+    fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums/${this.state.id}`)
     .then(resp => resp.json())
     .then(data => this.setState({
       detalle:data

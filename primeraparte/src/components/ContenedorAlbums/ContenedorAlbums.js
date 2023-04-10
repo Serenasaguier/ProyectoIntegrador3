@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Card from '../Card/Card'
 
 const ApiAlbums = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums'
 const url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums?index=0&limit=9'
@@ -13,7 +14,7 @@ const mas = [
   },
   {
     nombre: 'Ir al detalle',
-    path:'/detalleAlbums'
+    path:`/DetalleElemento`
   }
 ]
 
@@ -27,7 +28,7 @@ class ContenedorAlbums extends Component {
             texto:'Ver mas',
             clase:'hidden',
             data:props.info,
-            albums:[]
+            albums:[],
         
         }
     }
@@ -46,21 +47,6 @@ class ContenedorAlbums extends Component {
       }
   }
 
-  componentDidMount(){
-    this.traerInfo(ApiAlbums,this.seting)
-  }
-
-  traerInfo(url,callback){
-    fetch(url)
-        .then(res => res.json())
-        .then(data => this.setState({
-          // musica: this.state.musica.concat(data),
-           albums: data.data,
-           mas: data.info // deberia poner .next
-        }, ()=> console.log(this.state.albums))) 
-        .catch(err => console.log(err))
-    }
-
 
   dameMas(){
     this.traerInfo(this.state.mas,this.setearData)
@@ -70,17 +56,18 @@ class ContenedorAlbums extends Component {
   render(){
     return(
       <div>
+        
         {
-           this.state.albums.length === 0 ?
+           this.props.data.length === 0 ?
                     <p>Cargando...</p> :
                     <section className='section1'>
+                     
                       <article className='article1'>
                     <div className="character-card" >
                       {
-                        this.state.albums.map( album => 
-                        <h1 > {album.title }</h1>)
+                        this.props.data.map(album =>
+                        <Card info={album} />)
                       }
-                      
                         {
                           mas.map((extra,idx)=><a>
                             <Link to={extra.path}> {extra.nombre}</Link>

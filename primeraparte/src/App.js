@@ -11,6 +11,7 @@ import Favoritos from "./components/Favoritos/Favoritos";
 import NotFound from "./screens/NotFound/NotFound";
 import Artistas from "./screens/Artistas/Artistas";
 import Albums from "./screens/Albums/Albums";
+import DetalleElemento from "./screens/DetalleElemento/DetalleElemento";
 
 function App() {
   
@@ -24,6 +25,7 @@ function App() {
           <Route path='/Albums' component={Albums} />
           <Route path='/Buscar' component={Buscar} />
          <Route path='' component={ NotFound } />
+         <Route path='/DetalleElemento/id/:id' component={DetalleElemento} />
 
         </Switch>
         <Footer />
