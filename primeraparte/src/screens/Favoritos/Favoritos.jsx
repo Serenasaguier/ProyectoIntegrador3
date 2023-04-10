@@ -1,18 +1,18 @@
 
-// import React, { Component } from 'react';
-// import './favoritos.css';
-// import { Link } from 'react-router-dom';
+ import React, { Component } from 'react';
+ import './favoritos.css';
+ import { Link } from 'react-router-dom';
 
-// class Favoritos extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             props: props,
-//             peliculas: [],
-//             borrar: [],
-//             loader: true
-//         };
-//     };
+ class Favoritos extends Component {
+     constructor(props) {
+         super(props);
+         this.state = {
+             props: props,
+             peliculas: [],
+             borrar: [],
+             loader: true
+         };
+     }};
 
 
 //     componentDidMount() {
