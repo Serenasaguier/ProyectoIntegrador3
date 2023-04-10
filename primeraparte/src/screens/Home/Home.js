@@ -1,30 +1,22 @@
 import React, { Component } from 'react'
-// importar el componente de la info 
+import ContenedorAlbums from '../../components/ContenedorAlbums/ContenedorAlbums'
+import ContenedorArtistas from '../../components/ContenedorArtistas/ContenedorArtistas'
 
 
 export default class Home extends Component {
   render() {
     return (
       <>   
-      <main>   
-            <section class="section1 ">
-                <div>
-                    <h3 class="comogenre"><a href="detail-track.html" > Canciones </a> </h3>
-                    <h2>Aca pongo canciones traidas del componente con el obj lit</h2>
-                </div>
-                
+      <main> 
+                <div className='albums'>
+                    <h3 className="comogenre"><a href="" > Albums </a> </h3>
+                    <ContenedorAlbums />\
 
-            </section>
-
-            <section class="section2 ">
-                <div>
-                    <h3 class="comogenre"><a href="detail-album.html" > Albums </a> </h3>
                 </div>
-                
-            </section> 
-            <section class="section3">
+            <section className="section2">
                 <div>
-                    <h3 class="comogenre"><a href="detail-artist.html" > Artists </a> </h3>
+                    <h3 className="comogenre"><a href="" > Artists </a> </h3>
+                    <ContenedorArtistas />
                 </div>  
             </section>
       </main>

@@ -17,10 +17,6 @@ const opciones = [
         path: '/Favoritos',
     },
     {
-        nombre: 'Canciones',
-        path: '/Canciones',
-    },
-    {
         nombre: 'Albums',
         path: '/Albums',
     },

@@ -339,15 +339,15 @@ section{
     
 }
 .section1{
-    margin: 80px;
+    margin: 10px;
 }
 
 .section2 {
-    margin: 80px;
+    margin: 10px;
 }
 
 .section3 {
-    margin: 80px;
+    margin: 10px;
 }
 
 article{
@@ -488,7 +488,7 @@ footer {
 }
 
 footer.foot{
-    margin-top: 100px;
+    margin-top: 110px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin-left: -35px;
@@ -496,5 +496,40 @@ footer.foot{
     
 }
 
+.favs{
+    color: rgb(243, 135, 243) ;
+}
+
+div.formulario{
+    margin-left: 750px;
+    width: 100px;
+}
+
+div.albums{
+    margin-top: 0px;
+}
+
+.NavBar{
+    margin-bottom: 100px;
+}
+
+button.character-card{
+    padding: 20px;
+    background-color: rgb(38, 10, 70);
+    color: rgb(243, 135, 243);
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 30px;
+}
+
+p.hidden{
+    display: none;
+}
+
+p.show{
+    display: block;
+}
 
 }
