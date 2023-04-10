@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 const mas = [
-    { //nombre:'Ver todas', path:'/Albums'
+    {
+      nombre:'Ver todas',
+      path:'/Albums'
     },
     {
       nombre: 'Ir al detalle',
@@ -10,7 +12,7 @@ const mas = [
     }
   ]
 
-class Card extends Component{
+class CardCanciones extends Component{
 
     constructor(props){
         super(props)
@@ -43,10 +45,11 @@ class Card extends Component{
     return (
       <article className='article1'>
           <div className='contenedorfoto'>
-          <img src={this.props.info.cover}></img>
+          <img src={this.props.info.artist.cover}/>
           </div>
           <h3 className='canciones'>{this.props.info.title}</h3>
           <h4> </h4>
+          <div className='canciones'>
           {
                           mas.map((extra,idx)=><h3 className='canciones'>
                             <Link to={extra.path}> {extra.nombre}</Link>
@@ -55,14 +58,14 @@ class Card extends Component{
                         <p className={this.state.clase}>descripcion</p>
                         <h3 className='canciones'>
                         <a onClick={()=> this.cambiarTexto()}> {this.state.texto} </a></h3>
-                        
+                        </div>
       </article>
       
         )
 }
 }
 
-export default Card 
+export default CardCanciones 
 
   
 

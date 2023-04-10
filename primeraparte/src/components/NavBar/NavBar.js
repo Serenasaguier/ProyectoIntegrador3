@@ -32,7 +32,6 @@ const opciones = [
 function Navbar(props){
 
     return (
-        <body>
         <header className='NavBar'>
         <nav className='navheader'>
             <div className='infonav'>
@@ -42,10 +41,8 @@ function Navbar(props){
                 )
                 }
             </div>
-            
         </nav>
         </header>
-        </body>
     )
 }
 
