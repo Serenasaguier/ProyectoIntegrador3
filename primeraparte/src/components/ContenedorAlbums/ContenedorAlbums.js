@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-const ApiAlbums = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums'
+const ApiAlbums = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums'
+const url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums?index=0&limit=9'
 
 console.log(ApiAlbums)
 
@@ -24,7 +25,10 @@ class ContenedorAlbums extends Component {
             load: true,
             mas:' ',
             texto:'Ver mas',
-            clase:'hidden'
+            clase:'hidden',
+            data:props.info,
+            albums:[]
+        
         }
     }
 
@@ -48,13 +52,15 @@ class ContenedorAlbums extends Component {
 
   traerInfo(url,callback){
     fetch(url)
-    .then(res => res.json())
-    .then(data => this.setState({
-      musica: this.state.musica.concat(data),
-      mas: data.info // deberia poner .next
-    }))
-    .catch(error => console.log(error))
-  }
+        .then(res => res.json())
+        .then(data => this.setState({
+          // musica: this.state.musica.concat(data),
+           albums: data.data,
+           mas: data.info // deberia poner .next
+        }, ()=> console.log(this.state.albums))) 
+        .catch(err => console.log(err))
+    }
+
 
   dameMas(){
     this.traerInfo(this.state.mas,this.setearData)
@@ -65,17 +71,16 @@ class ContenedorAlbums extends Component {
     return(
       <div>
         {
-           this.state.musica.length === 0 ?
+           this.state.albums.length === 0 ?
                     <p>Cargando...</p> :
                     <section className='section1'>
                       <article className='article1'>
                     <div className="character-card" >
-                        <h3 className='canciones'>
-                            {
-                                this.state.musica.map(musica => <li>{musica.title}</li>)
-                            }
-                        </h3>
-                        <h4>album copeee</h4>
+                      {
+                        this.state.albums.map( album => 
+                        <h1 > {album.title }</h1>)
+                      }
+                      
                         {
                           mas.map((extra,idx)=><a>
                             <Link to={extra.path}> {extra.nombre}</Link>

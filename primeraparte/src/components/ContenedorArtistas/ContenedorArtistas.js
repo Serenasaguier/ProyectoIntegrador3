@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-const ApiArtistas = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart'
+const ApiArtistas = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart'
 let url = 'https://api.allorigins.win/raw?url=https://api.deezer.com/chart'
 
 console.log(ApiArtistas)
@@ -14,7 +14,7 @@ console.log(ApiArtistas)
             artistas: [],
             load: true,
              mas:' ',
-             Key: ' '
+             data: props.info,
         }
     }
     
