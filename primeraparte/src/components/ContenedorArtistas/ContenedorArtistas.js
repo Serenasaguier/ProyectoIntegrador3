@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import CardCanciones from '../CardCanciones.js/CardCanciones'
+import CardArtistas from '../CardArtistas/CardArtistas';
+
 
 const ApiArtistas = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart'
 let url = 'https://api.allorigins.win/raw?url=https://api.deezer.com/chart'
 
-console.log(ApiArtistas)
+
 
 
  class ContenedorArtistas extends Component {
@@ -27,7 +28,7 @@ console.log(ApiArtistas)
                   <p>Cargando...</p> :
                   <article className='article1'>
                        {
-                          this.props.data.map(losArtistas => <CardCanciones info={losArtistas}/>)
+                          this.props.data.map(losArtistas => <CardArtistas info={losArtistas}/>)
                        }
                  </article>
              }

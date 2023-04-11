@@ -23,10 +23,7 @@ const opciones = [
         nombre: 'Artistas',
         path: '/Artistas',
     },
-    {
-        nombre: 'Buscar',
-        path: '/Buscar',
-    }
+    
 ]
 
 function Navbar(props){

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './detail.css'
+
 
 class Detalle extends Component {
     constructor(props) {
@@ -70,7 +70,7 @@ class Detalle extends Component {
         let favoritosToString = JSON.stringify(favoritos);
         localStorage.setItem('favoritos', favoritosToString);
 
-        console.log(localStorage)
+        
     }
 
 

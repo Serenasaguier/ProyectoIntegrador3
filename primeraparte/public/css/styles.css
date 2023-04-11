@@ -256,12 +256,14 @@ header {
     color: black;
     margin-bottom: 0%;
 
-    width: 89%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
     
 }
+
+
 
 div .divheader{
     display: flex;

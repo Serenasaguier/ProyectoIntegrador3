@@ -29,6 +29,7 @@ class ContenedorAlbums extends Component {
                       {
                         this.props.data.map(album =>
                         <Card info={album} />)
+                        
                       }
                     </div>
                     </article>
