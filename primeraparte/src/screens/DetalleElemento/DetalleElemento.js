@@ -14,6 +14,7 @@ class Detalle extends Component {
       mensaje: "Agregar a favoritos",
       iconFav: "fa-regular fa-heart",
       loader: true,
+      data: props.info
     };
   }
 
@@ -77,23 +78,25 @@ class Detalle extends Component {
 
   render() {
     return (
+
+      
       <React.Fragment>
         <img src="../../images/loader.gif" alt="loader" /> :
-        <article className="detail-card">
+        <article className="detail-card canciones masLargo">
           <img src={`${this.state.datosAlbum.cover}`} alt="" />
-          <div>
-            <h2 className="title-detail">{this.state.datosAlbum.title}</h2>
-            <div>
-              <p>Generos cubiertos: </p>
+          <div >
+            <h3 className="title-detail canciones">{this.state.datosAlbum.title}</h3>
+            <div className="masChico">
+              <h3 className="canciones">Generos cubiertos: </h3>
               {this.state.datosAlbum &&
                 this.state.datosAlbum.genres &&
                 this.state.datosAlbum.genres.data.map((asd, i) => (
                   <div key={i}>{asd.name}</div>
                 ))}
             </div>
-            <p>Fecha de publicacion: {this.state.datosAlbum.release_date}</p>
-            <div>
-              <p>Lista de canciones: </p>
+            <p className="canciones">Fecha de publicacion: {this.state.datosAlbum.release_date}</p>
+            <div className="canciones color">
+              <p className="canciones">Lista de canciones: </p>
               {this.state.datosAlbum &&
                 this.state.datosAlbum.tracks &&
                 this.state.datosAlbum.tracks.data.map((asd, i) => (
@@ -101,8 +104,8 @@ class Detalle extends Component {
                 ))}
             </div>
 
-            <p
-              className="boton"
+            <p 
+              className="boton canciones"
               onClick={() => this.modificarFavoritos(this.state.id)}
             >
               <i className={this.state.iconFav}></i> {this.state.mensaje}

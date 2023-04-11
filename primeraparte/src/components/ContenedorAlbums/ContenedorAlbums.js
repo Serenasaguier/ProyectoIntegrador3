@@ -5,6 +5,14 @@ import Card from '../Card/Card'
 const ApiAlbums = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums'
 const url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums?index=0&limit=9'
 
+
+const verTodas = [
+  {
+      nombre: ' Ver todas',
+      path : '/Albums'
+  }
+]
+
 console.log(ApiAlbums)
 
 class ContenedorAlbums extends Component {
@@ -24,16 +32,20 @@ class ContenedorAlbums extends Component {
         {
            this.props.data.length === 0 ?
                     <p>Cargando...</p> :
-                      <article className='article1'>
                     <div className="character-card" >
                       {
                         this.props.data.map(album =>
                         <Card info={album} />)
                         
                       }
-                    </div>
-                    </article>
-                    
+                      <div>
+                        {verTodas.map((ver,idx)=>(
+                          <h3 className='canciones'>
+                            <Link to={'/Albums'}>Ver todas</Link>
+                          </h3>
+                        ))}
+                      </div>
+                    </div>          
          }
       </div>
     )

@@ -8,6 +8,12 @@ const searchEndpoint = 'https://thingproxy.freeboard.io/fetch/https://api.deezer
 const ApiArtistas = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists';
 let UrlArtistas= `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/search/artist?q=`;
 
+const ApiAlbums =
+  "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums";
+const searchEndpoint =
+  "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/search?q=";
+const ApiArtistas =
+  "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart";
 
 export default class Home extends Component {
   constructor(props){
@@ -140,6 +146,11 @@ componentDidMount(){
         console.log(event)
     }
 
+  componentDidMount() {
+    console.log('entrando compon')
+    this.traerInfo(ApiAlbums, this.seting);
+    this.traerInfoCanciones(ApiArtistas, this.seting);
+  }
 
   render() {
     console.log(this.state.resultadosBusqueda)
@@ -164,15 +175,17 @@ componentDidMount(){
            <ContenedorAlbums data={this.state.albums} />
          </div>
 
-            <section className="section2">
-                <div>
-                    <h3 className="comogenre"><a href="" > Artists </a> </h3>
-                    <ContenedorArtistas data={this.state.artistas} />
-                </div>  
-            </section>
-      </main>
+          <section className="section2">
+            <div>
+              <h3 className="comogenre">
+                <a href=""> Artists </a>{" "}
+              </h3>
+              {console.log(this.state.artistas, 'data artistas')}
+              <ContenedorArtistas data={this.state.artistas} />
+            </div>
+          </section>
+        </main>
       </>
-
-    )
+    );
   }
 }

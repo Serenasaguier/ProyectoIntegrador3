@@ -534,4 +534,22 @@ p.show{
     display: block;
 }
 
+div.color{
+    color:  rgb(243, 135, 243);
+}
+
+div.masChico{
+    width: 300px;
+    height: 100px;
+    color:  rgb(243, 135, 243);
+}
+
+article.masLargo{
+    height: 700px;
+}
+
+.canciones{
+    color:  rgb(243, 135, 243);
+}
+
 }
