@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 
 const mas = [
   {
-    //nombre:'Ver todas', path:'/Albums'
-  },
-  {
     nombre: "Ir al detalle",
     path: `/DetalleElemento`,
   },
 ];
+
 
 class Card extends Component {
   constructor(props) {

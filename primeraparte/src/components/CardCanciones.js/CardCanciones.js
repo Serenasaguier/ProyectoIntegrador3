@@ -45,7 +45,7 @@ class CardCanciones extends Component{
     return (
       <article className='article1'>
           <div className='contenedorfoto'>
-          <img src={this.props.info.artist.cover}/>
+          <img src={this.props.info.album.cover}/>
           </div>
           <h3 className='canciones'>{this.props.info.title}</h3>
           <h4> </h4>

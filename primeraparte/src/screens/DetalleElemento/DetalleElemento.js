@@ -13,6 +13,7 @@ class Detalle extends Component {
       mensaje: "Agregar a favoritos",
       iconFav: "fa-regular fa-heart",
       loader: true,
+      data: props.info
     };
   }
 
@@ -76,6 +77,8 @@ class Detalle extends Component {
 
   render() {
     return (
+
+      
       <React.Fragment>
         <img src="../../images/loader.gif" alt="loader" /> :
         <article className="detail-card canciones masLargo">
