@@ -1,4 +1,3 @@
-
 import React from "react";
 import {Route} from 'react-router-dom'
 import {Switch} from 'react-router-dom'
@@ -24,9 +23,11 @@ function App() {
           <Route path='/Artistas' component={Artistas}/>
           <Route path='/Albums' component={Albums} />
           <Route path='/Buscar' component={Buscar} />
-         <Route path='' component={ NotFound } />
-         <Route path='/DetalleElemento/id/:id' component={DetalleElemento} />
+          <Route path='/album/:id' component={DetalleElemento} />
+          
 
+          {/* Abajo de todo va el notfound */}
+          <Route path='' component={NotFound} />
         </Switch>
         <Footer />
       </>
