@@ -39,7 +39,7 @@ class Card extends Component {
     return (
       <div className="article1">
         <div className="contenedorfoto">
-          <img src={this.props.info.cover} alt='img'></img>
+          <img src={this.props.info.cover}></img>
         </div>
         <h3 className="canciones">{this.props.info.title}</h3>
         <h4> </h4>
@@ -48,7 +48,7 @@ class Card extends Component {
             <Link to={`/album/${this.props.info.id}`}> {extra.nombre}</Link>
           </h3>
         ))}
-        <p className={this.state.clase}>descripcion</p>
+        <p className={this.state.clase}>Artist name : {this.props.info.artist.name}</p>
         <h3 className="canciones">
           <a onClick={() => this.cambiarTexto()}> {this.state.texto} </a>
         </h3>

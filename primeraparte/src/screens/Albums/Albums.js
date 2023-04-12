@@ -5,11 +5,7 @@ import ContenedorAlbums from '../../components/ContenedorAlbums/ContenedorAlbums
 const ApiAlbums =
   "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums";
 
-
-
-
 class Albums extends Component {
-
 
   constructor(props) {
     super(props);

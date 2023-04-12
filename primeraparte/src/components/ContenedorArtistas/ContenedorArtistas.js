@@ -18,7 +18,7 @@ class ContenedorArtistas extends Component {
   }
 
   render() {
-      console.log(this.props.data, 'data')
+      // console.log(this.props.data, 'data')
 
     return (
       <div className='gridContainer'>
