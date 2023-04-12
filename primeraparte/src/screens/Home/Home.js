@@ -95,7 +95,21 @@ export default class Home extends Component {
         mensaje: ' No escribiste nada'
       })
     } else {
-      fetch(searchEndpoint + valorBuscado)
+    /*   fetch(searchEndpoint + valorBuscado)
+        .then(res => res.json())
+        .then(data => {
+          this.setState({
+            resultadosBusqueda: data.data,
+            mensaje: `Se encontraron un total de ${data.data.length} registros para ${valorBuscado}`
+          });
+          if (data.data.length === 0) {
+            this.setState({
+              mensaje: `No se han encontrado resultados para ${valorBuscado}`
+            })
+          }
+        })
+        .catch(error => console.log(error)) */
+        fetch(searchEndpoint + valorBuscado)
         .then(res => res.json())
         .then(data => {
           this.setState({

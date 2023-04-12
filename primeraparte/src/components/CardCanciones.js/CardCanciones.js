@@ -39,10 +39,11 @@ class CardCanciones extends Component{
 
 
     render(){
+      console.log(this.props.info)
     return (
       <div className="article1">
           <div className='contenedorfoto'>
-          <img src={this.props.info.artist.picture} alt='imagen'/>
+          <img src={this.props.info.album.cover} alt='imagen'/>
           </div>
           <h3 className='canciones'>{this.props.info.title}</h3>
           <h4> </h4>
