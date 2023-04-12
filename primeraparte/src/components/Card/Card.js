@@ -37,9 +37,9 @@ class Card extends Component {
 
   render() {
     return (
-      <article className="article1">
+      <div className="article1">
         <div className="contenedorfoto">
-          <img src={this.props.info.cover}></img>
+          <img src={this.props.info.cover} alt='img'></img>
         </div>
         <h3 className="canciones">{this.props.info.title}</h3>
         <h4> </h4>
@@ -52,7 +52,7 @@ class Card extends Component {
         <h3 className="canciones">
           <a onClick={() => this.cambiarTexto()}> {this.state.texto} </a>
         </h3>
-      </article>
+      </div>
     );
   }
 }

@@ -1,20 +1,8 @@
-import React, { Component } from 'react'
-import CardArtistas from '../CardArtistas/CardArtistas';
-
-
+import React, { Component } from "react";
 import CardCanciones from "../CardCanciones.js/CardCanciones";
-import {Link} from 'react-router-dom'
 
 const ApiArtistas =
   "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart";
-let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart";
-
-const verTodas = [
-  {
-      nombre: ' Ver todas',
-      path : '/Albums'
-  }
-]
 
 console.log(ApiArtistas);
 
@@ -33,7 +21,7 @@ class ContenedorArtistas extends Component {
       console.log(this.props.data, 'data')
 
     return (
-      <div>
+      <div className='gridContainer'>
         {this.props.data && 
         this.props.data.length === 0 ? (
           <p>Cargando...</p>
@@ -42,22 +30,6 @@ class ContenedorArtistas extends Component {
           {this.props.data.map((losArtistas) => (
             <CardCanciones info={losArtistas} />
           ))}
-          <div>
-            {
-               this.props.data.length === 0 ?
-                  <p>Cargando...</p> :
-                  <article className='article1'>
-                       {
-                          this.props.data.map(losArtistas => <CardArtistas info={losArtistas}/>)
-                       }
-                 </article>
-             }
-           {verTodas.map((ver,idx)=>(
-               <h3 className='canciones'>
-                 <Link to={'/Tracks'}>Ver todas</Link>
-                 </h3>
-                 ))}
-           </div>
           </div>
         )}
       </div>

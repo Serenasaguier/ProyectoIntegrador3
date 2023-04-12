@@ -6,7 +6,7 @@ import ContenedorArtistas from '../../components/ContenedorAlbums/ContenedorAlbu
     return (
       <>
         <div className='favs'>Artistas</div>
-        <ContenedorArtistas />
+        <ContenedorArtistas data={[]}  />
         </>
         
     )

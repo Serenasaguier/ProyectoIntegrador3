@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import './CardCanciones.css'
 
-const mas = [
-    {
-      nombre:'Ver todas',
-      path:'/Albums'
-    },
+const mas = [    
     {
       nombre: 'Ir al detalle',
       path:`/DetalleElemento`
@@ -43,9 +40,9 @@ class CardCanciones extends Component{
 
     render(){
     return (
-      <article className='article1'>
+      <div className="article1">
           <div className='contenedorfoto'>
-          <img src={this.props.info.album.cover}/>
+          <img src={this.props.info.album.cover} alt='imagen'/>
           </div>
           <h3 className='canciones'>{this.props.info.title}</h3>
           <h4> </h4>
@@ -59,13 +56,16 @@ class CardCanciones extends Component{
                         <h3 className='canciones'>
                         <a onClick={()=> this.cambiarTexto()}> {this.state.texto} </a></h3>
                         </div>
-      </article>
+      </div>
       
         )
 }
 }
 
 export default CardCanciones 
+
+  
+
 
   
 
