@@ -23,7 +23,7 @@ class ContenedorAlbums extends Component {
         
         {
            this.props.data.length === 0 ?
-                    <p>Cargando...</p> :
+                    <p className='favs'>Cargando...</p> :
                       <article className='article1'>
                     <div className="character-card" >
                       {

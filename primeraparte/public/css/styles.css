@@ -316,6 +316,7 @@ main{
 .comogenre {
     margin-right: 1000px;
     margin-top: 0%;
+    
 }
 
 .tituloPpal{
@@ -498,6 +499,7 @@ footer.foot{
 
 .favs{
     color: rgb(243, 135, 243) ;
+    margin-right: 300px;
 }
 
 div.formulario{
@@ -507,6 +509,10 @@ div.formulario{
 
 div.albums{
     margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
 }
 
 .NavBar{
