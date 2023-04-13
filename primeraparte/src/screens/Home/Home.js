@@ -144,6 +144,11 @@ export default class Home extends Component {
     this.state.verMas = true
   }
 
+  componentDidMount() {
+    console.log('entrando compon')
+    this.traerInfo(ApiAlbums, this.seting);
+    this.traerInfoCanciones(ApiArtistas, this.seting);
+  }
 
   render() {
     return (
