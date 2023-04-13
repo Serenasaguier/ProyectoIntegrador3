@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
 
-class Detalle extends Component {
+class DetalleTracks extends Component {
   constructor(props) {
     super(props);
     this.state = {
       props: props,
       id: Number(props.match.params.id),
-      datosAlbum: [],
+      datosTracks: [],
       genres: "",
       companies: {},
       country: {},
@@ -21,13 +21,13 @@ class Detalle extends Component {
   componentDidMount() {
     console.log("algo", this.state.id);
     fetch(
-      `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/album/${this.state.id}`
+      `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/${this.state.id}`
     )
       .then((res) => res.json())
       .then((data) => {
         console.log(data, "data");
         this.setState({
-          datosAlbum: data,
+          datosTracks: data,
         });
       })
       .catch((err) => console.log(err));
@@ -78,43 +78,27 @@ class Detalle extends Component {
 
   render() {
     return (
-
-      
-      <React.Fragment>
+      <>
         <img src="../../images/loader.gif" alt="loader" /> :
         <article className="detail-card canciones masLargo">
-          <img src={`${this.state.datosAlbum.cover}`} alt="" />
+          <img src={`${this.state.datosTracks.album.cover}`} alt="" />
           <div >
-            <h3 className="title-detail canciones">{this.state.datosAlbum.title}</h3>
+            <h3 className="title-detail canciones">{this.state.datosTracks.title}</h3>
+            <h3 className="title-detail canciones">{this.state.datosTracks.artist.name}</h3>
+            <h3 className="title-detail canciones">{this.state.datosTracks.album.title}</h3>
             <div className="masChico">
-              <h3 className="canciones">Generos cubiertos: </h3>
-              {this.state.datosAlbum &&
-                this.state.datosAlbum.genres &&
-                this.state.datosAlbum.genres.data.map((asd, i) => (
-                  <div key={i}>{asd.name}</div>
-                ))}
+            <h3 className="title-detail canciones">{this.state.datosTracks.link}</h3>
             </div>
-            <p className="canciones">Fecha de publicacion: {this.state.datosAlbum.release_date}</p>
-            <div className="canciones color">
-              <p className="canciones">Lista de canciones: </p>
-              {this.state.datosAlbum &&
-                this.state.datosAlbum.tracks &&
-                this.state.datosAlbum.tracks.data.map((asd, i) => (
-                  <div key={i}>{asd.title}</div>
-                ))}
-            </div>
-
             <p 
               className="boton canciones"
-              onClick={() => this.modificarFavoritos(this.state.id)}
-            >
+              onClick={() => this.modificarFavoritos(this.state.id)}>
               <i className={this.state.iconFav}></i> {this.state.mensaje}
             </p>
           </div>
         </article>
-      </React.Fragment>
+      </>
     );
   }
 }
 
-export default Detalle;
+export default DetalleTracks;

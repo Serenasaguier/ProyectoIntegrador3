@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 
 const mas = [
   {
-    //nombre:'Ver todas', path:'/Albums'
-  },
-  {
     nombre: "Ir al detalle",
     path: `/DetalleElemento`,
   },
 ];
+
 
 class Card extends Component {
   constructor(props) {
@@ -39,7 +37,7 @@ class Card extends Component {
 
   render() {
     return (
-      <article className="article1">
+      <div className="article1">
         <div className="contenedorfoto">
           <img src={this.props.info.cover}></img>
         </div>
@@ -50,11 +48,11 @@ class Card extends Component {
             <Link to={`/album/${this.props.info.id}`}> {extra.nombre}</Link>
           </h3>
         ))}
-        <p className={this.state.clase}>descripcion</p>
+        <p className={this.state.clase}>Artist name : {this.props.info.artist.name}</p>
         <h3 className="canciones">
           <a onClick={() => this.cambiarTexto()}> {this.state.texto} </a>
         </h3>
-      </article>
+      </div>
     );
   }
 }

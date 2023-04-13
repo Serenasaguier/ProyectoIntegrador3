@@ -19,20 +19,19 @@ class ContenedorArtistas extends Component {
   }
 
   render() {
-      console.log(this.props.data, 'data')
+      // console.log(this.props.data, 'data')
 
     return (
-      <div>
+      <div className='gridContainer'>
         {this.props.data && 
         this.props.data.length === 0 ? (
           <p>Cargando...</p>
         ) : (
-          <article className="article1">
+          <div className='character-card'>
           {this.props.data.map((losArtistas) => (
             <CardCanciones info={losArtistas} />
           ))}
-          </article> 
-         
+          </div>
         )}
       </div>
     );

@@ -1,6 +1,9 @@
-
-
 /* Iphone 12 pro responsive */
+
+:root {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 /* en general */
 body {
@@ -12,32 +15,87 @@ body {
 /* header */
 header {
     text-decoration: none;
-    height: 40px;
+    /* height: 40px; */
     margin-inline: 70px;
     text-decoration: none;
     color: black;
-    margin-left: 170px;
-    
+    /* margin-left: 170px; */
+
 }
 
 .menuheader {
     text-decoration: none;
     color: rgb(243, 135, 243);
-    margin: 20px; 
+    margin: 20px;
 }
 
 .sacardilineado {
     text-decoration: none;
-    
+
 }
 
 /*img*/
 
-div .contenedorfoto{
+.contenedorfoto {
     display: flex;
-    flex-wrap: wrap;   
-    justify-content: flex-end;
-    
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.comogenre {
+
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 90%;
+    position: relative;
+}
+
+.comogenre h1 {
+    background-color: blueviolet;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2 rem;
+    padding: 10px 20px;
+}
+
+.comogenre h3 {
+    background-color: blueviolet;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+
+    padding: 10px 20px;
+}
+
+
+.comogenre a {
+    background-color: blueviolet;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+
+    padding: 10px 20px;
+}
+
+.filtro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.filtro input {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(243, 135, 243);
+    border-radius: 5px;
+    outline: none;
 }
 
 img {
@@ -53,15 +111,15 @@ img {
 
 /* main  de home */
 
-main{
+main {
     background-color: black;
 }
 
-.tituloPpal{
+.tituloPpal {
     font-size: 30px;
-    color: rgb(243, 135, 243) ;
+    color: rgb(243, 135, 243);
     margin-bottom: 0px;
-    
+
 }
 
 div h3 .canciones {
@@ -72,49 +130,52 @@ div h3 .canciones {
     margin-left: 70px;
 }
 
-section{
+section {
     display: flex;
     flex-wrap: wrap;
-    
+
 }
-.section1{
+
+.section1 {
     margin-left: 100px;
     margin-top: 300px;
 }
 
-.section2 {
-    margin-left: 100px;
-}
+/*.section2{
+     margin-left: 100px; 
+} */
 
 .section3 {
     margin-left: 100px;
 }
 
-article{
-    height: 270px;
-    width: 590px;
+.article1 {
+    /* height: 320px; */
+    width: 300px;
     background-color: rgb(38, 10, 70);
-    margin-left: 70px;
-    margin-top: 30px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    border: 3px solid rgb(243, 135, 243);
+    margin: 20px;
+
+
 }
 
-h3{
-    color:  rgb(243, 135, 243);
-    align-content: flex-start;
-    
+h3 {
+    color: rgb(243, 135, 243);
+    text-align: center;
+
 }
 
-h4{
+h4 {
     color: rgb(184, 101, 184);
-    
+
 }
 
-p{
+p {
     color: rgb(138, 74, 138);
-} 
+}
 
 
 .maingenre {
@@ -130,26 +191,34 @@ div {
 }
 
 div a {
-    padding: 20px;
     background-color: rgb(38, 10, 70);
-    color:  rgb(243, 135, 243);
+    color: rgb(243, 135, 243);
+    text-decoration: none;
+}
+
+
+button {
+    /* padding: 20px; */
+    background-color: rgb(38, 10, 70);
+    color: rgb(243, 135, 243);
     text-decoration: none;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     margin: 30px;
     margin-right: 100px;
-    
+    border: none;
 }
-.article2{
+
+.article2 {
     text-decoration: none;
 }
 
 /*detail-genre*/
-article .nombreartist{
+article .nombreartist {
     text-decoration: none;
     align-content: center;
-    
+
 }
 
 /*detail-artists */
@@ -163,17 +232,17 @@ article .nombreartist{
 /*detail-track*/
 .largo {
 
-color:rgb(243, 135, 243);
-height: 500px;
+    color: rgb(243, 135, 243);
+    height: 500px;
 
 }
 
-#alarga{
+#alarga {
     height: 600px;
 }
 
 
-.largo{
+.largo {
     height: 500px;
 }
 
@@ -194,319 +263,353 @@ footer {
     font-size: 20px;
 }
 
- .navheader {
+.navheader {
     text-decoration: none;
     text-align: right;
     background-color: rgb(38, 10, 70);
-    height: 00px;
+    /* height: 00px;
     width: 70%;
-    margin-left: 70px;
+    margin-left: 70px; */
 
 }
-.nombres{
+
+.nombres {
     margin: 20px;
-    color:  rgb(243, 135, 243);
-    background-color:  rgb(38, 10, 70) ;
+    color: rgb(243, 135, 243);
+    background-color: rgb(38, 10, 70);
     padding: 20px;
 }
 
- .bajarfootgen {
+.bajarfootgen {
     margin-top: 450px;
 }
 
- .bajarfootdetgen{
+.bajarfootdetgen {
     margin-top: 200px;
 }
 
-.bajarfootdetal{
+.bajarfootdetal {
     margin-top: 170px;
 }
 
-.bajarfootdettr{
+.bajarfootdettr {
     margin-top: 180px;
 }
 
-.bajarfootdetp{
+.bajarfootdetp {
     margin-top: 270px;
 }
-.bajarfootsearch{
+
+.bajarfootsearch {
     margin-top: 80px;
 }
 
 
 @media (min-width: 1024px) {
 
-/* en general */
-body {
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    background-color: black;
-}
+    /* en general */
+    body {
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+        background-color: black;
+    }
 
-div.chico{
-    height: 170px;
-    width: 200px;
-}
+    div.chico {
+        height: 170px;
+        width: 200px;
+    }
 
-/* header */
-header {
-    text-decoration: none;
-    height: 40px;
-    margin-inline: 80px;
-    color: black;
-    margin-bottom: 0%;
+    /* header */
+    header {
+        text-decoration: none;
+        height: 40px;
+        margin-inline: 80px;
+        color: black;
+        margin-bottom: 0%;
 
-    width: 89%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    
-}
+        width: 89%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
 
-div .divheader{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
+    }
 
-.menuheader {
-    text-decoration: none;
-    color: rgb(243, 135, 243);
-    margin: 20px; 
-}
+    div .divheader {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
 
-.sacardilineado {
-    text-decoration: none;
-    height: 0px;
-    
-}
+    .menuheader {
+        text-decoration: none;
+        color: rgb(243, 135, 243);
+        margin: 20px;
+    }
 
-/*img*/
+    .sacardilineado {
+        text-decoration: none;
+        height: 0px;
 
-div.contenedorfoto{
-   height : 100px;
-    
-}
+    }
 
-img {
-    border-radius: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
-    width: 100px;
-    height: 90px;
-    margin-top: 10px;
+    /*img*/
 
-}
+    div.contenedorfoto {
+        height: 100px;
 
-a#mini{
-    height: 10px;
-    background-color: none;
-    margin-top: none;
-}
+    }
 
-/* main  de home */
+    img {
+        border-radius: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        width: 100px;
+        height: 90px;
+        margin-top: 10px;
 
-main{
-    background-color: black;
-}
+    }
 
 .comogenre {
     margin-right: 1000px;
     margin-top: 0%;
     
 }
+    a#mini {
+        height: 10px;
+        background-color: none;
+        margin-top: none;
+    }
 
-.tituloPpal{
-    font-size: 30px;
-    color: rgb(243, 135, 243) ;
-    margin-bottom: 70px;
-    
-}
+    /* main  de home */
 
-div h3 .canciones {
-    align-content: center;
-    background-color: rgb(38, 10, 70);
-    margin-right: 900px;
-    padding: 10px;
-    margin-left: 70px;
-}
+    main {
+        background-color: black;
+    }
 
-section{
-    display: flex;
-    flex-wrap: wrap;
-    
-}
-.section1{
-    margin: 10px;
-}
+    .comogenre {
 
-.section2 {
-    margin: 10px;
-}
 
-.section3 {
-    margin: 10px;
-}
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 90%;
+        position: relative;
+    }
 
-article{
-    height: 280px;
-    width: 300px;
-    background-color: rgb(38, 10, 70);
-    margin-left: 70px;
-    margin-top: 30px;
+    .comogenre h3 {
+        background-color: blueviolet;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        text-transform: uppercase;
+
+        padding: 10px 20px;
+    }
+
+    .tituloPpal {
+        font-size: 30px;
+        color: rgb(243, 135, 243);
+        margin-bottom: 70px;
+
+    }
+
+    div h3 .canciones {
+        align-content: center;
+        background-color: rgb(38, 10, 70);
+        margin-right: 900px;
+        padding: 10px;
+        margin-left: 70px;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .section1 {
+        margin: 10px;
+    }
+
+    .section2 {
+        margin: 10px;
+    }
+
+    .section3 {
+        margin: 10px;
+    }
+
+    .gridContainer {
+        min-height: 60vh;
+        position: relative;
+        min-width: 320px;
+        list-style: none;
+
+        display: flex;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%
+    }
+
+    .article1 {
+        /* height: 320px; */
+        width: 300px;
+        background-color: rgb(38, 10, 70);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 3px solid rgb(243, 135, 243);
+        margin: 20px;
+        padding: 10px;
+
+    }
+
+    h3 {
+        color: rgb(243, 135, 243);
+        align-content: flex-start;
+        font-size: 1rem;
+        text-align: center;
+
+    }
+
+    h4 {
+        color: rgb(184, 101, 184);
+
+    }
+
+    p {
+        color: rgb(138, 74, 138);
+    }
+
+    .maingenre {
+        margin-top: 0%;
+    }
+
+    /* div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 3px solid  rgb(243, 135, 243) ;
-}
-
-h3{
-    color:  rgb(243, 135, 243);
-    align-content: flex-start;
-    
-}
-
-h4{
-    color: rgb(184, 101, 184);
-    
-}
-
-p{
-    color: rgb(138, 74, 138);
-} 
-
-.maingenre{
-    margin-top:0%;
-}
-
-div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-content: center;
     
-}
+} */
 
-div a {
-    padding: 20px;
-    background-color: rgb(38, 10, 70);
-    color:  rgb(243, 135, 243);
-    text-decoration: none;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 30px;
-    
-    
-}
+    div a {
+        /* padding: 20px; */
+        background-color: rgb(38, 10, 70);
+        color: rgb(243, 135, 243);
+        text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 20px;
 
-/*detail-genre*/
-article .nombreartist{
-    text-decoration: none;
-    align-content: center;
-    
-}
 
-/* div.chico{
+    }
+
+    button {
+        padding: 20px;
+        background-color: rgb(38, 10, 70);
+        color: rgb(243, 135, 243);
+        text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 30px;
+
+
+    }
+
+    /*detail-genre*/
+    article .nombreartist {
+        text-decoration: none;
+        align-content: center;
+
+    }
+
+    /* div.chico{
     height: 0px;
     margin-top: 20px;
 } */
 
-/*detail-artists */
+    /*detail-artists */
 
-.detail-artist {
-    height: 400px;
-    width: 300px;
-}
+    .detail-artist {
+        height: 400px;
+        width: 300px;
+    }
 
-/*detail-track*/
-.largo {
+    /*detail-track*/
+    .largo {
 
-color:rgb(243, 135, 243);
-height: 400px;
+        color: rgb(243, 135, 243);
+        height: 400px;
 
-}
+    }
 
 
-/* footer */
+    /* footer */
 
-footer {
-    text-decoration: none;
-    height: 40px;
-    margin-inline: 80px;
-    color: black;
-    width: 89%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    footer {
+        text-decoration: none;
+        height: 40px;
+        margin-inline: 80px;
+        color: black;
+        width: 89%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
 
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-}
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+    }
 
-.navheader {
-    text-decoration: none;
-    text-align: right;
-    background-color: rgb(38, 10, 70);
-    height: 100px;
-    width: 100%;
-    margin-left: 170px;
-    border: 3px solid  rgb(243, 135, 243) ;
-}
+    .navheader {
+        text-decoration: none;
+        text-align: right;
+        background-color: rgb(38, 10, 70);
+        height: 100px;
+        width: 100%;
+        border: 3px solid rgb(243, 135, 243);
+    }
 
-.NavBar{
-    margin-left: 10px;
-}
+    /*.NavBar {
+         margin-left: 10px; 
+    }*/
 
-.infonav{
-   width: 100%;
-   height: 100%;
-   padding: -10%;
-   border-radius: 1%;
-   display: flex;
-   align-items: center;
-    
-}
+    .infonav {
 
-.menuheader{
-    
-    width: 10%;
-    height: 100%;
-   padding: 0%;
-   align-self: center;
-}
+        border-radius: 1%;
 
-.nombres{
-    margin: 20px;
-    margin-right: 20px;
-    color:  rgb(243, 135, 243);
-    margin-top: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
+    }
 
-footer.foot{
-    margin-top: 110px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    margin-left: -35px;
-    
-    
-}
+    .menuheader {
+        align-self: center;
+    }
 
 .favs{
     color: rgb(243, 135, 243) ;
     margin-right: 300px;
 }
+    .nombres {
+        margin: 20px;
+        margin-right: 20px;
+        color: rgb(243, 135, 243);
+        margin-top: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
 
-div.formulario{
-    margin-left: 750px;
-    width: 100px;
-}
-
+    footer.foot {
+        margin-top: 110px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: -35px;
+    }
 div.albums{
     margin-top: 0px;
     display: flex;
@@ -515,45 +618,41 @@ div.albums{
 
 }
 
-.NavBar{
-    margin-bottom: 100px;
-}
+    }
 
-button.character-card{
-    padding: 20px;
-    background-color: rgb(38, 10, 70);
-    color: rgb(243, 135, 243);
-    text-decoration: none;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 30px;
-}
+    .favs {
+        color: rgb(243, 135, 243);
+    }
 
-p.hidden{
-    display: none;
-}
+    div.formulario {
+        margin-left: 750px;
+        width: 100px;
+    }
 
-p.show{
-    display: block;
-}
+    div.albums {
+        margin-top: 0px;
+    }
 
-div.color{
-    color:  rgb(243, 135, 243);
-}
+    .NavBar {
+        margin-bottom: 100px;
+    }
 
-div.masChico{
-    width: 300px;
-    height: 100px;
-    color:  rgb(243, 135, 243);
-}
+    button.character-card {
+        padding: 20px;
+        background-color: rgb(38, 10, 70);
+        color: rgb(243, 135, 243);
+        text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 30px;
+    }
 
-article.masLargo{
-    height: 700px;
-}
+    p.hidden {
+        display: none;
+    }
 
-.canciones{
-    color:  rgb(243, 135, 243);
-}
+    p.show {
+        display: block;
+    }
 
-}

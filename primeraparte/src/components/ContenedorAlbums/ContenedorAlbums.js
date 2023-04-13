@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import Card from '../Card/Card'
 
 const ApiAlbums = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums'
-const url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums?index=0&limit=9'
 
 console.log(ApiAlbums)
 
@@ -19,20 +17,19 @@ class ContenedorAlbums extends Component {
 
   render(){
     return(
-      <div>
+      <div className='gridContainer'>
         
         {
            this.props.data.length === 0 ?
-                    <p className='favs'>Cargando...</p> :
-                      <article className='article1'>
+                    <p>Cargando...</p> :
                     <div className="character-card" >
                       {
-                        this.props.data.map(album =>
-                        <Card info={album} />)
+                        this.props.data.map((album, idx) =>
+                        
+                        <Card info={album} key={idx} />)
                       }
-                    </div>
-                    </article>
-                    
+                      
+                    </div>          
          }
       </div>
     )
