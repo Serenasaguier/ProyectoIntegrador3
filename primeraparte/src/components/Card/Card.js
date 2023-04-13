@@ -45,7 +45,7 @@ class Card extends Component {
         <h4> </h4>
         {mas.map((extra, idx) => (
           <h3 className="canciones">
-            <Link to={`/album/${this.props.info.id}`}> {extra.nombre}</Link>
+            <Link key={idx} to={`/album/${this.props.info.id}`}> {extra.nombre}</Link>
           </h3>
         ))}
         <p className={this.state.clase}>Artist name : {this.props.info.artist.name}</p>

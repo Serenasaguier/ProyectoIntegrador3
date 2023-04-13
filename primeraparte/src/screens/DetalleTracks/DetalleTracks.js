@@ -76,6 +76,7 @@ class DetalleTracks extends Component {
     console.log(localStorage);
   }
 
+  // falta el player y que se vean las imagenes
   render() {
     return (
       <>
@@ -89,6 +90,7 @@ class DetalleTracks extends Component {
             <div className="masChico">
             <h3 className="title-detail canciones">{this.state.datosTracks.link}</h3>
             </div>
+            
             <p 
               className="boton canciones"
               onClick={() => this.modificarFavoritos(this.state.id)}>

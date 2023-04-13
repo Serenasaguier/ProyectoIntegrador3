@@ -56,7 +56,7 @@ const ApiArtistas =
       <>
         <div className='gridContainer'>
         <div className="comogenre" >
-          <h1> Artistas{" "} </h1>
+          <h1> Canciones{" "} </h1>
         </div>
         <div className='filtro'>
           <h3>  Buscar por nombre :  </h3>

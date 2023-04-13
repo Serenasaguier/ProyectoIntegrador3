@@ -8,6 +8,10 @@ import {Link} from 'react-router-dom'
 
 const opciones = [
     {
+        nombre: 'Tod@s',
+        path: '/',
+    },
+    {
         nombre: 'Home',
         path: '/',
     },
@@ -20,7 +24,7 @@ const opciones = [
         path: '/Albums',
     },
     {
-        nombre: 'Artistas',
+        nombre: 'Canciones',
         path: '/Artistas',
     },
     
