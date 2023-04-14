@@ -1,0 +1,10 @@
+.cancionesStyle{
+    color: rgb(138, 74, 138);
+    margin-right: 13px;
+}
+
+.title-detail{
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}

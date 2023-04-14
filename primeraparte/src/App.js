@@ -22,7 +22,6 @@ function App() {
           <Route path='/Favoritos' component={Favoritos} />
           <Route path='/Artistas' component={Artistas}/>
           <Route path='/Albums' component={Albums} />
-         <Route path='' component={ NotFound } />
          <Route path='/album/:id' component={DetalleElemento} />
          <Route path='/DetalleTracks/:id' component={DetalleTracks} />
 

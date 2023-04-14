@@ -1,0 +1,6 @@
+.card-favdiv{
+    color: rgb(243, 135, 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
