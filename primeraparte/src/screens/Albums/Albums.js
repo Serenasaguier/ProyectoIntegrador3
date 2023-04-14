@@ -60,7 +60,7 @@ class Albums extends Component {
           <h1>  Albums{" "} </h1>
         </div>
         <div className='filtro'>
-          <h3>  Buscar por titulo :  </h3>
+          <h3>  Buscar album :  </h3>
           <input type='text' onChange={(event) => this.filtro(event)} />
         </div>
         <ContenedorAlbums data={this.state.albums.filter(ele => ele.title.toLowerCase().includes(this.state.filtrar.toLowerCase())

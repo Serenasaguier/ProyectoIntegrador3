@@ -143,6 +143,10 @@ export default class Home extends Component {
     })
     this.state.verMas = true
   }
+  evitarSubmit(event) {
+    event.preventDefault();
+
+  }
 
   componentDidMount() {
     console.log('entrando compon')
@@ -154,21 +158,21 @@ export default class Home extends Component {
     return (
       <>
         <main>
-          <div className='navbuscador'>
+          <form className='navbuscador' onSumbit={(event)=>this.evitarSubmit(event)}>
             <input 
-            type="text" 
-            placeholder="Búsqueda" 
-            className="search buscar" 
-            onChange={(event) => this.guardarValor(event)}
-            value={this.state.valorInput} 
+              type="text" 
+              placeholder="Búsqueda" 
+              className="search buscar" 
+              onChange={(event) => this.guardarValor(event)}
+              value={this.state.valorInput} 
             />
             <button 
-            type="submit" 
-            onClick={(event) => this.metodoQueEnvia(event)}
+              type="submit" 
+              onClick={(event) => this.metodoQueEnvia(event)}
             > 
-            Search
+              Search
             </button>
-          </div>
+          </form>
 
 
           //Para mostrar los resultados de la busqueda
