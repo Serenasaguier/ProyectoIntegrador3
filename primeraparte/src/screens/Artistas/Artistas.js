@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import ContenedorArtistas from '../../components/ContenedorAlbums/ContenedorAlbums'
+import ContenedorAlbums from "../../components/ContenedorAlbums/ContenedorAlbums";
 
 
 const ApiArtistas =
   "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart";
+ 
 
  class Artistas extends Component {
 
@@ -50,13 +52,13 @@ const ApiArtistas =
 
 
   render() {
-
-    console.log('seccion artistas ', this.state.artistas);
+    
+     console.log('seccion artistas ', this.state.artistas); 
     return (
       <>
         <div className='gridContainer'>
         <div className="comogenre" >
-          <h1> Artistas{" "} </h1>
+          <h1> Canciones{" "} </h1>
         </div>
         <div className='filtro'>
           <h3>  Buscar por nombre :  </h3>

@@ -114,7 +114,7 @@ export default class Home extends Component {
         .then(data => {
           this.setState({
             resultadosBusqueda: data.data,
-            mensaje: `Se encontraron un total de ${data.data.length} registros para ${valorBuscado}`
+            mensaje: `Se encontraron ${data.data.length} resultados para ${valorBuscado}`
           });
           if (data.data.length === 0) {
             this.setState({
@@ -143,6 +143,10 @@ export default class Home extends Component {
     })
     this.state.verMas = true
   }
+  evitarSubmit(event) {
+    event.preventDefault();
+
+  }
 
   componentDidMount() {
     console.log('entrando compon')
@@ -154,21 +158,21 @@ export default class Home extends Component {
     return (
       <>
         <main>
-          <div className='navbuscador'>
+          <form className='navbuscador' onSumbit={(event)=>this.evitarSubmit(event)}>
             <input 
-            type="text" 
-            placeholder="Búsqueda" 
-            className="search buscar" 
-            onChange={(event) => this.guardarValor(event)}
-            value={this.state.valorInput} 
+              type="text" 
+              placeholder="Búsqueda" 
+              className="search buscar" 
+              onChange={(event) => this.guardarValor(event)}
+              value={this.state.valorInput} 
             />
             <button 
-            type="submit" 
-            onClick={(event) => this.metodoQueEnvia(event)}
+              type="submit" 
+              onClick={(event) => this.metodoQueEnvia(event)}
             > 
-            Search
+              Search
             </button>
-          </div>
+          </form>
 
 
           //Para mostrar los resultados de la busqueda
@@ -217,14 +221,14 @@ export default class Home extends Component {
           <div className="albums">
 
             <div className="comogenre" >
-              <h3>Artists </h3>
+              <h3>Canciones </h3>
             </div>
 
             <ContenedorArtistas data={this.state.artistas.slice(0, 6)} />
             <div>
 
               <h3 className='comogenre' >
-                <Link to={'/Artistas'} >Ver todos los artistas </Link>
+                <Link to={'/Artistas'} >Ver todas las canciones </Link>
               </h3>
 
             </div>
