@@ -39,7 +39,7 @@ class Card extends Component {
     return (
       <div className="article1">
         <div className="contenedorfoto">
-          <img src={this.props.info.cover}></img>
+          <img src={this.props.info.cover} alt='imagen'></img>
         </div>
         <h3 className="canciones">{this.props.info.title}</h3>
         <h4> </h4>

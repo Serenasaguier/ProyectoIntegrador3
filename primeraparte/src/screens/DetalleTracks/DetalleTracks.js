@@ -1,33 +1,32 @@
-import React, { Component } from 'react';
-
-
-class DetalleTracks extends Component {
+import React, { Component } from "react";
+import './detalletrack.css'
+class Detalle extends Component {
   constructor(props) {
     super(props);
     this.state = {
       props: props,
       id: Number(props.match.params.id),
-      datosTracks: [],
+      datosAlbum: [],
       genres: "",
       companies: {},
       country: {},
       mensaje: "Agregar a favoritos",
       iconFav: "fa-regular fa-heart",
       loader: true,
-      data: props.info
+      data: props.info,
     };
   }
 
   componentDidMount() {
     console.log("algo", this.state.id);
     fetch(
-      `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/${this.state.id}`
+      `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/track/${this.state.id}`
     )
       .then((res) => res.json())
       .then((data) => {
         console.log(data, "data");
         this.setState({
-          datosTracks: data,
+          datosAlbum: data,
         });
       })
       .catch((err) => console.log(err));
@@ -76,31 +75,46 @@ class DetalleTracks extends Component {
     console.log(localStorage);
   }
 
-  // falta el player y que se vean las imagenes
   render() {
     return (
-      <>
+      <React.Fragment>
         <img src="../../images/loader.gif" alt="loader" /> :
         <article className="detail-card canciones masLargo">
-          <img src={`${this.state.datosTracks.album.cover}`} alt="" />
-          <div >
-            <h3 className="title-detail canciones">{this.state.datosTracks.title}</h3>
-            <h3 className="title-detail canciones">{this.state.datosTracks.artist.name}</h3>
-            <h3 className="title-detail canciones">{this.state.datosTracks.album.title}</h3>
-            <div className="masChico">
-            <h3 className="title-detail canciones">{this.state.datosTracks.link}</h3>
-            </div>
+          <div>
+            {
+              this.state.datosAlbum &&
+              this.state.datosAlbum.album && <img src={`${this.state.datosAlbum.album.cover}`} alt="" />
+            }
             
-            <p 
+          </div>
+          <div>
+            <h3 className="title-detail canciones">
+              {this.state.datosAlbum.title}
+            </h3>
+            <div className="masChico">
+              <h3 className="canciones">Artista: { this.state.datosAlbum &&
+              this.state.datosAlbum.album && this.state.datosAlbum.artist.name}</h3>
+            </div>
+            <p className="canciones">
+              Fecha de publicacion: {this.state.datosAlbum.release_date}
+            </p>
+            <div className="canciones color">
+              <p className="canciones ">Disco: { this.state.datosAlbum &&
+              this.state.datosAlbum.album && this.state.datosAlbum.album.title}</p>
+              
+            </div>
+
+            <p
               className="boton canciones"
-              onClick={() => this.modificarFavoritos(this.state.id)}>
+              onClick={() => this.modificarFavoritos(this.state.id)}
+            >
               <i className={this.state.iconFav}></i> {this.state.mensaje}
             </p>
           </div>
         </article>
-      </>
+      </React.Fragment>
     );
   }
 }
 
-export default DetalleTracks;
+export default Detalle;

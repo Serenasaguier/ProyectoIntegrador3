@@ -28,6 +28,7 @@ class ContenedorArtistas extends Component {
           <p>Cargando...</p>
         ) : (
           <div className='character-card'>
+            {console.log(this.props.data,'conteneee')}
           {this.props.data.map((losArtistas) => (
             <CardCanciones info={losArtistas} />
           ))}

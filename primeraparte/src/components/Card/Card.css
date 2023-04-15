@@ -64,7 +64,7 @@ main{
 
 div h3 .canciones {
     align-content: center;
-    background-color: rgb(38, 10, 70);
+   background-color: rgb(38, 10, 70);
     margin-right: 900px;
     padding: 10px;
     margin-left: 70px;
@@ -321,6 +321,7 @@ main{
     color: rgb(243, 135, 243) ;
     margin-bottom: 70px;
     
+    
 }
 
 div h3 .canciones {
@@ -363,6 +364,7 @@ article{
 h3{
     color:  rgb(243, 135, 243);
     align-content: flex-start;
+    
     
 }
 
