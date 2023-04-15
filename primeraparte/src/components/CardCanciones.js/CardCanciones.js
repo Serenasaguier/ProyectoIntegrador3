@@ -76,7 +76,6 @@ class CardCanciones extends Component{
           <img src={this.props.info.album.cover} alt='imagen'/>
           </div>
           <h3 className='canciones'>{this.props.info.title}</h3>
-          <h4> </h4>
           <div className='canciones'>
           {mas.map((extra, idx) => (
           <h3 className="canciones">
@@ -88,11 +87,12 @@ class CardCanciones extends Component{
         <a onClick={()=> this.cambiarTexto()}> {this.state.texto} </a></h3>
         </div>
         <p
-              className="boton canciones"
+              className="canciones"
               onClick={() => this.modificarFavoritos(this.props.info.id)}
             >
               <i className={this.state.iconFav}></i> {this.state.mensaje}
             </p>
+            
       </div>
       
         )

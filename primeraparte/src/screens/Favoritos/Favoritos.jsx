@@ -66,17 +66,21 @@ class Favoritos extends Component {
           <img src="../../images/loader.gif" alt="Loader" />
         ) : (
           <React.Fragment>
-            <h2 className="titulos">Favoritos</h2>
+            <div className="comogenre" >
+              <h3>  Favoritos{" "} </h3>
+            </div>
+            <div className="article1">
+            
             <section className="cardContainer">
               {this.state.canciones.length > 0 ? (
                 this.state.canciones.map((unaCancion, idx) => (
                   <article className="movie-card" key={idx}>
                     {console.log(unaCancion, "nashe")}
                     <Link to={`/detallePelicula/id/${unaCancion.id}`}>
-                      {unaCancion.album && <img src={unaCancion.album.cover} alt="" />}
+                      {unaCancion.album && <img className="contenedorfoto" src={unaCancion.album.cover} alt="" />}
                     </Link>
                     <div className="card-favdiv">
-                      <h2>{unaCancion.title}</h2> {/* Nombre */}
+                      <h3 className="canciones">{unaCancion.title}</h3> {/* Nombre */}
                       <i
                         className="fa-solid fa-heart"
                         onClick={() => {
@@ -89,19 +93,19 @@ class Favoritos extends Component {
                           });
                           this.borrar(unaCancion.id);
                         }}
-                      ></i>
+                      > Eliminar de Favoritos</i>
                     </div>
                     <Link to={`/DetalleTracks/${unaCancion.id}`}>
-                      <p> Ir a detalles </p>
+                      <p className="canciones"> Ir a detalles </p>
                     </Link>
-
-                    <p className="more">Ver más</p>
                   </article>
+                  
                 ))
               ) : (
                 <h3>Todavía no elegiste ningún favorito!</h3>
               )}
             </section>
+            </div>
           </React.Fragment>
         )}
       </main>
