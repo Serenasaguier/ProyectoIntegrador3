@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ContenedorArtistas from '../../components/ContenedorArtistas/ContenedorArtistas'
-import ContenedorAlbums from "../../components/ContenedorAlbums/ContenedorAlbums";
+
 
 
 const ApiArtistas =

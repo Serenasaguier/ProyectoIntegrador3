@@ -3,7 +3,7 @@ import CardCanciones from "../CardCanciones.js/CardCanciones";
 
 const ApiArtistas =
   "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart";
-//let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart";
+
 
 console.log(ApiArtistas);
 
