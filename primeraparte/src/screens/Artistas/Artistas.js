@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ContenedorArtistas from '../../components/ContenedorAlbums/ContenedorAlbums'
+import ContenedorArtistas from '../../components/ContenedorArtistas/ContenedorArtistas';
 
 const ApiArtistas =
   "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart";

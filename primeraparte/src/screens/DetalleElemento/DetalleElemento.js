@@ -116,12 +116,12 @@ class Detalle extends Component {
                 ))}
             </div>
                   
-            {/* <p
+             <p
               className="boton canciones"
               onClick={() => this.modificarFavoritos(this.state.id)}
             >
               <i className={this.state.iconFav}></i> {this.state.mensaje}
-            </p> */}
+            </p> 
           </div>
         </div>
       </React.Fragment>
