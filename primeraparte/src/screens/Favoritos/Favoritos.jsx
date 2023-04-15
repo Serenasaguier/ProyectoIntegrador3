@@ -9,6 +9,7 @@ class Favoritos extends Component {
       canciones: [],
       borrar: [],
       loader: true,
+      albumes:[]
     };
   }
 
@@ -21,6 +22,7 @@ class Favoritos extends Component {
     if (recuperoStorage !== null) {
       favoritosToArray = JSON.parse(recuperoStorage);
       let canciones = [];
+      let albumes = [];
     
       for (let i = 0; i < favoritosToArray.length; i++) {
         if (favoritosToArray[i] !== null) {
@@ -37,6 +39,20 @@ class Favoritos extends Component {
               });
             })
             .catch((err) => console.log(err));
+
+            fetch(
+              `https://thingproxy.freeboard.io/https://api.deezer.com/album/${favoritosToArray[i]}`,
+            )
+              .then((res) => res.json())
+              .then((data) => {
+                canciones.push(data);
+                console.log(data, "fetch");
+                this.setState({
+                  albumes: albumes,
+                  loader: false,
+                });
+              })
+              .catch((err) => console.log(err));
         }
       }
     }
@@ -66,11 +82,51 @@ class Favoritos extends Component {
           <img src="../../images/loader.gif" alt="Loader" />
         ) : (
           <React.Fragment>
+            <div className="comogenre">
+            <div className="article1">
+            <section className="cardContainer">
+              {this.state.albumes.length > 0 ? (
+                this.state.albumes.map((unaAlbum, idx) => (
+                  <article className="movie-card" key={idx}>
+                    {console.log(unaAlbum, "nashe")}
+                    <Link to={`/detallePelicula/id/${unaAlbum.id}`}>
+                      {unaAlbum.title && <img className="contenedorfoto" src={unaAlbum.cover} alt="" />}
+                    </Link>
+                    <div className="card-favdiv">
+                      <h3 className="canciones">{unaAlbum.title}</h3> {/* Nombre */}
+                      <i
+                        className="fa-solid fa-heart"
+                        onClick={() => {
+                          this.state.borrar.push(unaAlbum.id);
+                          this.setState({
+                            albumes: this.state.albumes.filter(
+                              (otroAlbum) =>
+                                !this.state.borrar.includes(otroAlbum.id)
+                            ),
+                          });
+                          this.borrar(unaAlbum.id);
+                        }}
+                      > Eliminar de Favoritos</i>
+                    </div>
+                    <Link to={`/DetalleAlbums/${unaAlbum.id}`}>
+                      <p className="canciones"> Ir a detalles </p>
+                    </Link>
+                  </article>
+                  
+                ))
+              ) : (
+                <h3>Todavía no elegiste ningún favorito!</h3>
+              )}
+            </section>
+            </div>
+            </div>
+
+
+
             <div className="comogenre" >
               <h3>  Favoritos{" "} </h3>
             </div>
             <div className="article1">
-            
             <section className="cardContainer">
               {this.state.canciones.length > 0 ? (
                 this.state.canciones.map((unaCancion, idx) => (

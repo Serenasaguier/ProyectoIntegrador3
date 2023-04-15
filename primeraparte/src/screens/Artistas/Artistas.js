@@ -12,7 +12,6 @@ const ApiArtistas =
   constructor(props) {
     super(props);
     this.state = {
-    
       artistas: [],
       load: true,
       data: props.info,
@@ -26,15 +25,11 @@ const ApiArtistas =
       .then((data) => {
         // console.log(data, 'info cacniones')
         this.setState({
-          artistas: data.tracks.data,
-          mas: data.info, // aca poner .next
+          artistas: data.tracks.data
         });
       })
       .catch((error) => console.log(error));
   }
-
-
-
 
   componentDidMount() {
     console.log('entrando compon')
