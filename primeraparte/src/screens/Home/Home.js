@@ -11,7 +11,7 @@ const searchEndpoint =
   "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/search?q=";
 const ApiArtistas =
   "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart";
-const UrlArtistas = "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/search/artist?q=";
+//const UrlArtistas = "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/search/artist?q=";
 
 export default class Home extends Component {
   constructor(props) {
