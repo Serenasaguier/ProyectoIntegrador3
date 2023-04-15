@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import ContenedorArtistas from '../../components/ContenedorAlbums/ContenedorAlbums'
-import ContenedorAlbums from "../../components/ContenedorAlbums/ContenedorAlbums";
-
 
 const ApiArtistas =
   "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart";
@@ -12,7 +10,6 @@ const ApiArtistas =
   constructor(props) {
     super(props);
     this.state = {
-    
       artistas: [],
       load: true,
       data: props.info,
@@ -26,15 +23,11 @@ const ApiArtistas =
       .then((data) => {
         // console.log(data, 'info cacniones')
         this.setState({
-          artistas: data.tracks.data,
-          mas: data.info, // aca poner .next
+          artistas: data.tracks.data
         });
       })
       .catch((error) => console.log(error));
   }
-
-
-
 
   componentDidMount() {
     console.log('entrando compon')

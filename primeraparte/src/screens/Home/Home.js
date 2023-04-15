@@ -11,8 +11,8 @@ const searchEndpoint =
   "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/search?q=";
 const ApiArtistas =
   "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart";
-//const UrlArtistas = "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/search/artist?q=";
 
+  
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -37,8 +37,7 @@ export default class Home extends Component {
       .then((data) => {
         // console.log(data, 'info cacniones')
         this.setState({
-          artistas: data.tracks.data,
-          mas: data.info, // aca poner .next
+          artistas: data.tracks.data
         });
       })
       .catch((error) => console.log(error));
@@ -50,8 +49,7 @@ export default class Home extends Component {
       .then((data) =>
         this.setState(
           {
-            albums: data.data,
-            mas: data.info, // deberia poner .next
+            albums: data.data
           },
           // () => console.log(this.state.albums)
         )
@@ -95,20 +93,6 @@ export default class Home extends Component {
         mensaje: ' No escribiste nada'
       })
     } else {
-    /*   fetch(searchEndpoint + valorBuscado)
-        .then(res => res.json())
-        .then(data => {
-          this.setState({
-            resultadosBusqueda: data.data,
-            mensaje: `Se encontraron un total de ${data.data.length} registros para ${valorBuscado}`
-          });
-          if (data.data.length === 0) {
-            this.setState({
-              mensaje: `No se han encontrado resultados para ${valorBuscado}`
-            })
-          }
-        })
-        .catch(error => console.log(error)) */
         fetch(searchEndpoint + valorBuscado)
         .then(res => res.json())
         .then(data => {

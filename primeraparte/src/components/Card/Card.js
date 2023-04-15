@@ -18,7 +18,51 @@ class Card extends Component {
       data: props.info,
       albums: [],
       mas: "",
+      mensaje: "agregar a favoritos"
     };
+  }
+
+  modificarFavoritos(id) {
+    let favoritos = [];
+    let recuperoStorage = localStorage.getItem("favoritos");
+
+    if (recuperoStorage !== null) {
+      let favoritosToArray = JSON.parse(recuperoStorage);
+      favoritos = favoritosToArray;
+    }
+    if (favoritos.includes(id)) {
+      let sacarFav = favoritos.indexOf(id);
+      favoritos.splice(sacarFav, 1);
+      this.setState({
+        mensaje: "Agregar a favoritos",
+        iconFav: "fa-regular fa-heart",
+      });
+    } else {
+      favoritos.push(id);
+      this.setState({
+        mensaje: "Quitar de favoritos",
+        iconFav: "fa-solid fa-heart",
+      });
+    }
+
+    let favoritosToString = JSON.stringify(favoritos);
+    localStorage.setItem("favoritos", favoritosToString);
+
+    console.log(localStorage);
+  }
+
+  cambiarTexto(){
+      if(this.state.texto === 'Ver mas'){
+          this.setState({
+              texto: 'Ver menos',
+              clase: 'show'
+          })
+      } else {
+          this.setState({
+              texto: 'Ver mas',
+              clase:'hidden'
+          })
+      }
   }
 
   cambiarTexto() {
@@ -52,7 +96,16 @@ class Card extends Component {
         <h3 className="canciones">
           <a onClick={() => this.cambiarTexto()}> {this.state.texto} </a>
         </h3>
+
+        <p
+              className="canciones"
+              onClick={() => this.modificarFavoritos(this.props.info.id)}
+            >
+              <i className={this.state.iconFav}></i> {this.state.mensaje}
+            </p>
       </div>
+      
+
     );
   }
 }

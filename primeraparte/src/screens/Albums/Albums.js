@@ -25,8 +25,7 @@ class Albums extends Component {
       .then((data) =>
         this.setState(
           {
-            albums: data.data,
-            mas: data.info, // deberia poner .next
+            albums: data.data
           },
           () => console.log(this.state.albums)
         )

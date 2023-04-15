@@ -31,6 +31,7 @@ class Detalle extends Component {
         });
       })
       .catch((err) => console.log(err));
+      
 
     let favoritos = [];
     let recuperoStorage = localStorage.getItem("favoritos");
