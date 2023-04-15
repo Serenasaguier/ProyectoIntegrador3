@@ -115,7 +115,7 @@ class Favoritos extends Component {
                   
                 ))
               ) : (
-                <h3>Todavía no elegiste ningún favorito!</h3>
+                <h3></h3>
               )}
             </section>
             </div>
@@ -158,7 +158,7 @@ class Favoritos extends Component {
                   
                 ))
               ) : (
-                <h3>Todavía no elegiste ningún favorito!</h3>
+                <p></p>
               )}
             </section>
             </div>

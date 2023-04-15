@@ -132,11 +132,11 @@ export default class Home extends Component {
 
   }
 
-  componentDidMount() {
+ /*  componentDidMount() {
     console.log('entrando compon')
     this.traerInfo(ApiAlbums, this.seting);
     this.traerInfoCanciones(ApiArtistas, this.seting);
-  }
+  } */
 
   render() {
     return (
@@ -208,7 +208,7 @@ export default class Home extends Component {
               <h3>Canciones </h3>
             </div>
 
-            <ContenedorArtistas data={this.state.artistas.slice(0, 6)} />
+            <ContenedorArtistas data={this.state.artistas} />
             <div>
 
               <h3 className='comogenre' >

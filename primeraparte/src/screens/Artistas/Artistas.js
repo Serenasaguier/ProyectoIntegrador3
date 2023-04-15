@@ -46,7 +46,6 @@ const ApiArtistas =
 
   render() {
     
-     console.log('seccion artistas ', this.state.artistas); 
     return (
       <>
         <div className='gridContainer'>

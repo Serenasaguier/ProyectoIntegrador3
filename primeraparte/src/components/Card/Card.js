@@ -19,6 +19,7 @@ class Card extends Component {
       albums: [],
       mas: "",
       mensaje: "agregar a favoritos"
+      
     };
   }
 
@@ -94,7 +95,7 @@ class Card extends Component {
         ))}
         <p className={this.state.clase}>Artist name : {this.props.info.artist.name}</p>
         <h3 className="canciones">
-          <a onClick={() => this.cambiarTexto()}> {this.state.texto} </a>
+          <a className="vermas" onClick={() => this.cambiarTexto()}> {this.state.texto} </a>
         </h3>
 
         <p

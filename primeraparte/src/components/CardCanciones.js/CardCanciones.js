@@ -69,7 +69,6 @@ class CardCanciones extends Component{
 
 
     render(){
-      console.log(this.props.info)
     return (
       <div className="article1">
           <div className='contenedorfoto'>
@@ -82,7 +81,7 @@ class CardCanciones extends Component{
             <Link to={`/DetalleTracks/${this.props.info.id}`}> {extra.nombre}</Link>
           </h3>
         ))}
-        <p className={this.state.clase}>Duracion : {this.props.info.duration}</p>
+        <p className={this.state.clase}>Duracion : {this.props.info.duration} segundos</p>
         <h3 className='canciones'>
         <a onClick={()=> this.cambiarTexto()}> {this.state.texto} </a></h3>
         </div>

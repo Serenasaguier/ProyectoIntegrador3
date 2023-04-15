@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom'
 
 const opciones = [
     {
-        nombre: 'Tod@s',
+        nombre: 'Music 4 every1',
         path: '/',
     },
     {
