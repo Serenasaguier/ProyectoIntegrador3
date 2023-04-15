@@ -79,11 +79,14 @@ class Detalle extends Component {
     return (
       <React.Fragment>
         <img src="../../images/loader.gif" alt="loader" /> :
+        <div  className="article1">
+
+        
         <article className="detail-card canciones masLargo">
           <div>
             {
               this.state.datosAlbum &&
-              this.state.datosAlbum.album && <img src={`${this.state.datosAlbum.album.cover}`} alt="" />
+              this.state.datosAlbum.album && <img className="contenedorfoto" src={`${this.state.datosAlbum.album.cover}`} alt="" />
             }
             
           </div>
@@ -103,6 +106,7 @@ class Detalle extends Component {
               this.state.datosAlbum.album && this.state.datosAlbum.album.title}</p>
               
             </div>
+            
 
             <p
               className="boton canciones"
@@ -112,6 +116,7 @@ class Detalle extends Component {
             </p>
           </div>
         </article>
+        </div>
       </React.Fragment>
     );
   }
