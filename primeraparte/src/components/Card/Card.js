@@ -19,13 +19,12 @@ class Card extends Component {
       albums: [],
       mas: "",
       mensaje: "agregar a favoritos"
-      
     };
   }
 
   modificarFavoritos(id) {
     let favoritos = [];
-    let recuperoStorage = localStorage.getItem("favoritos");
+    let recuperoStorage = localStorage.getItem("almbumsfavoritos");
 
     if (recuperoStorage !== null) {
       let favoritosToArray = JSON.parse(recuperoStorage);
@@ -47,7 +46,7 @@ class Card extends Component {
     }
 
     let favoritosToString = JSON.stringify(favoritos);
-    localStorage.setItem("favoritos", favoritosToString);
+    localStorage.setItem("almbumsfavoritos", favoritosToString);
 
     console.log(localStorage);
   }
@@ -95,7 +94,7 @@ class Card extends Component {
         ))}
         <p className={this.state.clase}>Artist name : {this.props.info.artist.name}</p>
         <h3 className="canciones">
-          <a className="vermas" onClick={() => this.cambiarTexto()}> {this.state.texto} </a>
+          <a onClick={() => this.cambiarTexto()}> {this.state.texto} </a>
         </h3>
 
         <p

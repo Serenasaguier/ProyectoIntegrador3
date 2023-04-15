@@ -12,7 +12,7 @@ const searchEndpoint =
 const ApiArtistas =
   "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart";
 
-  
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -132,12 +132,6 @@ export default class Home extends Component {
 
   }
 
- /*  componentDidMount() {
-    console.log('entrando compon')
-    this.traerInfo(ApiAlbums, this.seting);
-    this.traerInfoCanciones(ApiArtistas, this.seting);
-  } */
-
   render() {
     return (
       <>
@@ -208,7 +202,7 @@ export default class Home extends Component {
               <h3>Canciones </h3>
             </div>
 
-            <ContenedorArtistas data={this.state.artistas} />
+            <ContenedorArtistas data={this.state.artistas.slice(0, 6)} />
             <div>
 
               <h3 className='comogenre' >

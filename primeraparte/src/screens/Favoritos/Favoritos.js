@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import './favoritos.css'
+
 class Favoritos extends Component {
   constructor(props) {
     super(props);
@@ -8,6 +9,7 @@ class Favoritos extends Component {
       props: props,
       canciones: [],
       borrar: [],
+      borrarAlbum: [],
       loader: true,
       albumes:[]
     };
@@ -15,14 +17,16 @@ class Favoritos extends Component {
 
   componentDidMount() {
     let recuperoStorage = localStorage.getItem("favoritos");
+    let recuperoAlbumStorage = localStorage.getItem("almbumsfavoritos");
     let favoritosToArray;
+    let albumFavoritosToArray;
 
-    console.log(this.props, recuperoStorage, "recuperoStorage");
+    console.log(this.props, recuperoAlbumStorage, "recuperoAlbumStorage");
 
     if (recuperoStorage !== null) {
       favoritosToArray = JSON.parse(recuperoStorage);
       let canciones = [];
-      let albumes = [];
+      
     
       for (let i = 0; i < favoritosToArray.length; i++) {
         if (favoritosToArray[i] !== null) {
@@ -40,13 +44,24 @@ class Favoritos extends Component {
             })
             .catch((err) => console.log(err));
 
+        }
+      }
+    }
+    if (recuperoAlbumStorage !== null) {
+      albumFavoritosToArray = JSON.parse(recuperoAlbumStorage);
+      let canciones = [];
+      let albumes = [];
+    
+      for (let i = 0; i < albumFavoritosToArray.length; i++) {
+        if (albumFavoritosToArray[i] !== null) {
+          
             fetch(
-              `https://thingproxy.freeboard.io/https://api.deezer.com/album/${favoritosToArray[i]}`,
+              `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/album/${albumFavoritosToArray[i]}`,
             )
               .then((res) => res.json())
               .then((data) => {
-                canciones.push(data);
-                console.log(data, "fetch");
+                albumes.push(data);
+                console.log(data, "album fetch");
                 this.setState({
                   albumes: albumes,
                   loader: false,
@@ -57,12 +72,14 @@ class Favoritos extends Component {
       }
     }
 
-    if (JSON.parse(recuperoStorage).length === 0) {
+    if (JSON.parse(recuperoAlbumStorage).length === 0 && JSON.parse(recuperoStorage).length === 0) {
       this.setState({
         loader: false,
       });
     }
   }
+
+  
 
   borrar(id) {
     let recuperoStorage = localStorage.getItem("favoritos");
@@ -75,14 +92,30 @@ class Favoritos extends Component {
     localStorage.setItem("favoritos", favoritosToString);
   }
 
+
+  borrarAlbum(id) {
+    let recuperoAlbumStorage = localStorage.getItem("almbumsfavoritos");
+    let favoritosToArray = JSON.parse(recuperoAlbumStorage);
+
+    let sacarFav = favoritosToArray.indexOf(id);
+    favoritosToArray.splice(sacarFav, 1);
+
+    let favoritosToString = JSON.stringify(favoritosToArray);
+    localStorage.setItem("almbumsfavoritos", favoritosToString);
+  }
+
   render() {
+
+    console.log(this.state.albumes, "albumes favoritos");
     return (
       <main>
         {this.state.loader === true ? (
           <img src="../../images/loader.gif" alt="Loader" />
         ) : (
           <React.Fragment>
-            <div className="comogenre">
+             <div className="comogenre" >
+              <h3>  Albums Favoritos{" "} </h3>
+            </div>
             <div className="article1">
             <section className="cardContainer">
               {this.state.albumes.length > 0 ? (
@@ -97,34 +130,34 @@ class Favoritos extends Component {
                       <i
                         className="fa-solid fa-heart"
                         onClick={() => {
-                          this.state.borrar.push(unaAlbum.id);
+                          this.state.borrarAlbum.push(unaAlbum.id);
                           this.setState({
                             albumes: this.state.albumes.filter(
                               (otroAlbum) =>
-                                !this.state.borrar.includes(otroAlbum.id)
+                                !this.state.borrarAlbum.includes(otroAlbum.id)
                             ),
                           });
-                          this.borrar(unaAlbum.id);
+                          this.borrarAlbum(unaAlbum.id);
                         }}
                       > Eliminar de Favoritos</i>
                     </div>
-                    <Link to={`/DetalleAlbums/${unaAlbum.id}`}>
+            
+                       <Link to={`/album/${unaAlbum.id}`}>
                       <p className="canciones"> Ir a detalles </p>
                     </Link>
                   </article>
                   
                 ))
               ) : (
-                <h3></h3>
+                <h3>Todavía no elegiste ningún album favorito!</h3>
               )}
             </section>
-            </div>
             </div>
 
 
 
             <div className="comogenre" >
-              <h3>  Favoritos{" "} </h3>
+              <h3> Canciones Favoritos{" "} </h3>
             </div>
             <div className="article1">
             <section className="cardContainer">
@@ -132,7 +165,7 @@ class Favoritos extends Component {
                 this.state.canciones.map((unaCancion, idx) => (
                   <article className="movie-card" key={idx}>
                     {console.log(unaCancion, "nashe")}
-                    <Link to={`/detallePelicula/id/${unaCancion.id}`}>
+                    <Link to={`/detalleTracks/id/${unaCancion.id}`}>
                       {unaCancion.album && <img className="contenedorfoto" src={unaCancion.album.cover} alt="" />}
                     </Link>
                     <div className="card-favdiv">
@@ -158,7 +191,7 @@ class Favoritos extends Component {
                   
                 ))
               ) : (
-                <p></p>
+                <h3>Todavía no elegiste ninguna canción favorita!</h3>
               )}
             </section>
             </div>
