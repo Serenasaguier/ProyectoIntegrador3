@@ -18,10 +18,40 @@ class CardCanciones extends Component{
             clase:'hidden',
             data:props.info,
             albums:[],
-            mas:''
+            mas:'',
+            mensaje: "Agregar a favoritos",
+
         }
     }
 
+    modificarFavoritos(id) {
+      let favoritos = [];
+      let recuperoStorage = localStorage.getItem("favoritos");
+  
+      if (recuperoStorage !== null) {
+        let favoritosToArray = JSON.parse(recuperoStorage);
+        favoritos = favoritosToArray;
+      }
+      if (favoritos.includes(id)) {
+        let sacarFav = favoritos.indexOf(id);
+        favoritos.splice(sacarFav, 1);
+        this.setState({
+          mensaje: "Agregar a favoritos",
+          iconFav: "fa-regular fa-heart",
+        });
+      } else {
+        favoritos.push(id);
+        this.setState({
+          mensaje: "Quitar de favoritos",
+          iconFav: "fa-solid fa-heart",
+        });
+      }
+  
+      let favoritosToString = JSON.stringify(favoritos);
+      localStorage.setItem("favoritos", favoritosToString);
+  
+      console.log(localStorage);
+    }
 
     cambiarTexto(){
         if(this.state.texto === 'Ver mas'){
@@ -56,16 +86,16 @@ class CardCanciones extends Component{
         <h3 className='canciones'>
         <a onClick={()=> this.cambiarTexto()}> {this.state.texto} </a></h3>
         </div>
+        <p
+              className="boton canciones"
+              onClick={() => this.modificarFavoritos(this.props.info.id)}
+            >
+              <i className={this.state.iconFav}></i> {this.state.mensaje}
+            </p>
       </div>
       
         )
 }
 }
 
-export default CardCanciones 
-
-  
-
-
-  
-
+export default CardCanciones
