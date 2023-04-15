@@ -39,7 +39,6 @@ class CardCanciones extends Component{
 
 
     render(){
-      console.log(this.props.info)
     return (
       <div className="article1">
           <div className='contenedorfoto'>

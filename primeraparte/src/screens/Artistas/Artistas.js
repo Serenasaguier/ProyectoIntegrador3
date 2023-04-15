@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ContenedorArtistas from '../../components/ContenedorAlbums/ContenedorAlbums'
+import ContenedorArtistas from '../../components/ContenedorArtistas/ContenedorArtistas'
 import ContenedorAlbums from "../../components/ContenedorAlbums/ContenedorAlbums";
 
 
@@ -53,7 +53,6 @@ const ApiArtistas =
 
   render() {
     
-     console.log('seccion artistas ', this.state.artistas); 
     return (
       <>
         <div className='gridContainer'>
